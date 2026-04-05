@@ -1,0 +1,4733 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KodevaSoft — Ingeniería de Software & SaaS Premium</title>
+  <meta name="title" content="KodevaSoft — Ingeniería de Software & SaaS Premium">
+  <meta name="description" content="Expertos en desarrollo de software a medida, Apps móviles y soluciones SaaS con IA en Cúcuta. Transformamos ideas en productos digitales de alto rendimiento en kodevasoft.space.">
+  <meta name="keywords" content="desarrollo de software Cúcuta, plataformas SaaS, aplicaciones móviles, IA, ERP, CRM, KodevaSoft, ingeniería de software Colombia, kodevasoft.space">
+  <meta name="author" content="KodevaSoft">
+  <meta name="robots" content="index, follow">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kodevasoft.space/">
+  <meta property="og:title" content="KodevaSoft — Innovación Digital desde Cúcuta">
+  <meta property="og:description" content="Desarrollo premium de SaaS, Apps y Software a medida. Tecnología de última generación para escalar tu negocio.">
+  <meta property="og:image" content="https://kodevasoft.space/img/kodeva.webp">
+  
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://kodevasoft.space/">
+  <meta property="twitter:title" content="KodevaSoft — Soluciones Tecnológicas Escalables">
+  <meta property="twitter:description" content="Ingeniería de software de alto impacto y plataformas SaaS a medida.">
+  <meta property="twitter:image" content="https://kodevasoft.space/img/kodeva.webp">
+  
+  <link rel="canonical" href="https://kodevasoft.space/">
+  
+  <link rel="alternate" hreflang="es" href="https://kodevasoft.space/?lang=es">
+  <link rel="alternate" hreflang="en" href="https://kodevasoft.space/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://kodevasoft.space/">
+  <link rel="icon" id="favicon-link" type="image/webp" href="./img/kodeva.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* ============================================================
+   DESIGN TOKENS
+============================================================ */
+    :root {
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --transition: 0.25s ease;
+      --gold: #D4A017;
+      --gold-light: #F0C040;
+      --gold-dim: rgba(212, 160, 23, 0.15);
+      --orange: #f8c92e;
+      --orange-dim: rgba(255, 71, 0, 0.12);
+    }
+
+    [data-theme="dark"] {
+      --bg: #04080F;
+      --bg-2: #070D1A;
+      --bg-card: rgba(10, 18, 35, 0.75);
+      --surface: rgba(15, 25, 50, 0.6);
+      --text-1: #F0F4FF;
+      --text-2: rgba(220, 230, 255, 0.65);
+      --text-3: rgba(180, 200, 240, 0.4);
+      --blue: #3B82F6;
+      --blue-deep: #1B4FD8;
+      --blue-glow: rgba(59, 130, 246, 0.18);
+      --blue-border: rgba(59, 130, 246, 0.2);
+      --border: rgba(255, 255, 255, 0.07);
+      --border-strong: rgba(255, 255, 255, 0.14);
+      --nav-bg: rgba(4, 8, 15, 0.88);
+      --toggle-bg: rgba(15, 25, 50, 0.8);
+      --grid-line: rgba(59, 130, 246, 0.04);
+      --shadow-card: 0 4px 40px rgba(0, 0, 0, 0.5);
+      --glow-hero: radial-gradient(ellipse 90% 55% at 50% -5%, rgba(27, 79, 216, 0.28) 0%, transparent 70%);
+      --glow-2: radial-gradient(ellipse 50% 50% at 85% 85%, rgba(212, 160, 23, 0.07) 0%, transparent 60%);
+      --code-bg: #0A1020;
+      --code-border: rgba(59, 130, 246, 0.15);
+      --code-line: rgba(255, 255, 255, 0.04);
+      --quote-panel: rgba(4, 8, 15, 0.9);
+    }
+
+    [data-theme="light"] {
+      --bg: #F2F5FC;
+      --bg-2: #E8EDF8;
+      --bg-card: rgba(255, 255, 255, 0.85);
+      --surface: rgba(255, 255, 255, 0.7);
+      --text-1: #0A1628;
+      --text-2: rgba(10, 22, 60, 0.62);
+      --text-3: rgba(10, 22, 60, 0.38);
+      --blue: #1B4FD8;
+      --blue-deep: #1341B8;
+      --blue-glow: rgba(27, 79, 216, 0.08);
+      --blue-border: rgba(27, 79, 216, 0.18);
+      --border: rgba(0, 0, 0, 0.07);
+      --border-strong: rgba(0, 0, 0, 0.13);
+      --nav-bg: rgba(242, 245, 252, 0.92);
+      --toggle-bg: rgba(230, 235, 250, 0.9);
+      --grid-line: rgba(27, 79, 216, 0.04);
+      --shadow-card: 0 4px 32px rgba(27, 79, 216, 0.10);
+      --glow-hero: radial-gradient(ellipse 90% 55% at 50% -5%, rgba(59, 130, 246, 0.14) 0%, transparent 70%);
+      --glow-2: radial-gradient(ellipse 50% 50% at 85% 85%, rgba(212, 160, 23, 0.09) 0%, transparent 60%);
+      --code-bg: #1A2035;
+      --code-border: rgba(59, 130, 246, 0.2);
+      --code-line: rgba(255, 255, 255, 0.05);
+      --quote-panel: rgba(15, 25, 50, 0.95);
+    }
+
+    /* ============================================================
+   RESET & BASE
+============================================================ */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text-1);
+      overflow-x: hidden;
+      line-height: 1.65;
+      transition: background var(--transition), color var(--transition);
+      min-height: 100vh;
+    }
+
+    ::selection {
+      background: rgba(59, 130, 246, 0.3);
+      color: var(--text-1);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: var(--font-body);
+      cursor: pointer;
+      border: none;
+    }
+
+    /* ============================================================
+   PARTICLES
+============================================================ */
+    #particles {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    /* ============================================================
+   NAV
+============================================================ */
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: var(--nav-bg);
+      backdrop-filter: blur(16px) saturate(180%);
+      border-bottom: 1px solid var(--border);
+      transition: all var(--transition);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+/* LOGO: Contenedor limpio para la imagen */
+.nav-logo-img {
+  width: 40px; /* Un poco más grande para que destaque mejor */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* Eliminamos background y border-radius */
+}
+
+.nav-logo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mantiene la proporción del logo sin deformar */
+}
+
+/* Nombre de la marca */
+.nav-logo-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: -0.03em;
+  color: var(--text-1);
+  margin-left: 8px; /* Espaciado entre logo y texto */
+}
+
+.nav-logo-name span {
+  color: var(--blue-light); /* Cambié a blue-light para seguir tu identidad, o usa var(--orange) si prefieres */
+}
+
+    .nav-links {
+      display: flex;
+      gap: 0.25rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-2);
+      padding: 6px 14px;
+      border-radius: var(--radius-sm);
+      transition: all var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--text-1);
+      background: var(--surface);
+    }
+
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .toggle-pill {
+      display: flex;
+      background: var(--toggle-bg);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 3px;
+      gap: 2px;
+    }
+
+    .toggle-pill button {
+      background: none;
+      border: none;
+      padding: 4px 10px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-3);
+      transition: all var(--transition);
+    }
+
+    .toggle-pill button.active {
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-nav-cta {
+      background: linear-gradient(135deg, var(--orange), #ff6a35);
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      transition: all var(--transition);
+      box-shadow: 0 2px 12px rgba(255, 71, 0, 0.25);
+    }
+
+    .btn-nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(255, 71, 0, 0.4);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      padding: 6px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text-2);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .nav-drawer {
+      position: fixed;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: var(--nav-bg);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 2rem 2rem;
+      z-index: 99;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transform: translateY(-110%);
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-drawer.open {
+      transform: translateY(0);
+    }
+
+    .nav-drawer a {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-2);
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .drawer-controls {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
+    /* ============================================================
+   CONFIGURACIÓN GENERAL & LAYOUT
+============================================================ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 2rem 80px;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: var(--glow-hero), var(--glow-2);
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      /* Espacio entre bloques */
+    }
+
+    /* Fila Superior (Texto + Mascota) */
+    .hero-main-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 2.5rem;
+    }
+
+    /* Bloque Inferior (Editor + Stats) */
+    .hero-bottom-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+      width: 100%;
+    }
+
+    /* Responsividad para Escritorio */
+    @media (min-width: 1024px) {
+      .hero-main-row {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+      }
+
+      .hero-content {
+        align-items: flex-start;
+        flex: 1.2;
+      }
+
+      .hero-mascot-wrap {
+        flex: 0.8;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .hero-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    /* ============================================================
+   TEXTOS Y BOTONES
+============================================================ */
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 6px 16px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-2);
+      backdrop-filter: blur(8px);
+      animation: fadeInUp 0.6s ease 0.1s both;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22C55E;
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+      animation: pulse 2s infinite;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      color: var(--text-1);
+      animation: fadeInUp 0.6s ease 0.2s both;
+    }
+
+    .hero-title .t2 {
+      display: block;
+      color: var(--blue);
+    }
+
+    .hero-sub {
+      max-width: 600px;
+      font-size: clamp(1rem, 1.5vw, 1.1rem);
+      color: var(--text-2);
+      line-height: 1.7;
+      animation: fadeInUp 0.6s ease 0.3s both;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeInUp 0.6s ease 0.4s both;
+    }
+
+    .btn-cta-orange {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--orange), #ff6a35);
+      color: #fff;
+      padding: 13px 28px;
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 4px 20px rgba(255, 71, 0, 0.3);
+      transition: 0.3s;
+    }
+
+    .btn-cta-orange:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(255, 71, 0, 0.4);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--border-strong);
+      color: var(--text-1);
+      padding: 13px 28px;
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      font-weight: 500;
+      background: var(--surface);
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    /* ============================================================
+   MASCOTA KIRO (Ajuste de tamaño aquí)
+============================================================ */
+    .hero-mascot-wrap {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      /* Tamaño base */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeInUp 0.8s ease 0.5s both;
+    }
+
+    .hero-mascot-ring {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mascot-orbit {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 1px solid rgba(var(--blue-rgb), 0.15);
+      animation: spin 25s linear infinite;
+    }
+
+    .mascot-orbit-2 {
+      width: 75%;
+      height: 75%;
+      border: 1px dashed rgba(var(--blue-rgb), 0.3);
+      animation: spin 15s linear infinite reverse;
+      opacity: 0.6;
+    }
+
+    .mascot-dot {
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--blue);
+      box-shadow: 0 0 15px var(--blue);
+    }
+
+    .mascot-inner {
+      position: relative;
+      z-index: 2;
+      width: 500px;
+      height: 500px;
+      /* Tamaño KIRO */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: floatBob 0s ease-in-out infinite;
+    }
+
+    .mascot-img {
+      width: auto;
+      height: 110%;
+      object-fit: contain;
+      filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.5));
+    }
+
+    /* ============================================================
+   CODE EDITOR WIDGET (RESTAURADO)
+============================================================ */
+    .hero-code-editor {
+      width: 100%;
+      max-width: 760px;
+      background: var(--code-bg);
+      border: 1px solid var(--code-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      animation: fadeInUp 0.6s ease 0.55s both;
+      position: relative;
+    }
+
+    .code-editor-topbar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      background: rgba(255, 255, 255, 0.04);
+      border-bottom: 1px solid var(--code-border);
+    }
+
+    .code-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .code-dot-r {
+      background: #FF5F56;
+    }
+
+    .code-dot-y {
+      background: #FFBD2E;
+    }
+
+    .code-dot-g {
+      background: #27C93F;
+    }
+
+    .code-editor-tabs {
+      display: flex;
+      gap: 2px;
+      margin-left: 12px;
+    }
+
+    .code-tab {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-3);
+      padding: 3px 12px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .code-tab.active {
+      color: var(--text-1);
+      background: rgba(59, 130, 246, 0.1);
+      border-radius: 4px 4px 0 0;
+    }
+
+    .code-editor-status {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text-3);
+    }
+
+    .code-status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #22C55E;
+    }
+
+    .code-editor-body {
+      display: flex;
+      min-height: 220px;
+    }
+
+    .code-line-nums {
+      padding: 16px 0;
+      min-width: 48px;
+      background: rgba(0, 0, 0, 0.2);
+      border-right: 1px solid var(--code-border);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .code-lnum {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: rgba(180, 200, 240, 0.25);
+      text-align: right;
+      padding: 1px 12px 1px 0;
+      line-height: 1.75;
+    }
+
+    .code-content {
+      flex: 1;
+      padding: 16px 20px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      line-height: 1.75;
+      overflow-x: auto;
+      text-align: left;
+      color: #d1d5db;
+    }
+
+    /* Colores de Sintaxis */
+    .t-kw {
+      color: #C792EA;
+    }
+
+    .t-fn {
+      color: #82AAFF;
+    }
+
+    .t-str {
+      color: #C3E88D;
+    }
+
+    .t-num {
+      color: #F78C6C;
+    }
+
+    .t-cm {
+      color: rgba(180, 200, 240, 0.35);
+      font-style: italic;
+    }
+
+    .t-op {
+      color: #89DDFF;
+    }
+
+    .t-or {
+      color: #FF4700;
+    }
+
+    .t-bl {
+      color: #3B82F6;
+    }
+
+    .code-editor-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 16px;
+      background: rgba(0, 0, 0, 0.2);
+      border-top: 1px solid var(--code-border);
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text-3);
+    }
+
+/* ============================================================
+   STATS
+============================================================ */
+    .hero-stats-row {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeInUp 0.6s ease 0.6s both;
+    }
+
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text-1);
+      line-height: 1;
+    }
+
+    .stat-num .count {
+      color: var(--blue);
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-3);
+      margin-top: 4px;
+    }
+
+    /* ============================================================
+   ANIMACIONES Y RESPONSIVIDAD
+============================================================ */
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes floatBob {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 0.6;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-mascot-wrap {
+        width: 220px;
+        height: 220px;
+      }
+
+      .mascot-inner {
+        width: 160px;
+        height: 160px;
+      }
+
+      .hero-stats-row {
+        gap: 1.5rem;
+      }
+
+      .hero-code-editor {
+        max-width: 100%;
+      }
+    }
+
+    /* ============================================================
+   LOGOS MARQUEE SECTION - CONSTANTE Y A COLOR
+============================================================ */
+
+    .logos-section {
+      position: relative;
+      z-index: 1;
+      padding: 3rem 0 2rem;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+      /* Evita el scroll horizontal */
+      background: transparent;
+    }
+
+    .logos-label {
+      margin-bottom: 1.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-3);
+      opacity: 0.8;
+    }
+
+    /* Track de movimiento infinito */
+    .marquee-track {
+      display: flex;
+      gap: 1.5rem;
+      width: max-content;
+      animation: marquee 30s linear infinite;
+      /* Eliminamos el pause al hover para que nunca se detenga */
+    }
+
+    /* Estilo de las pastillas (Pills) */
+    .logo-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-2);
+      white-space: nowrap;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      /* Sutil profundidad */
+    }
+
+    /* Estilo de los Logos (Imágenes) */
+    .logo-pill img {
+      display: block;
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      /* Sin filtros: color original siempre activo */
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+    }
+
+    /* Animación de desplazamiento */
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        /* Se mueve hacia la izquierda la mitad del ancho total */
+        transform: translateX(calc(-50% - 0.75rem));
+      }
+    }
+
+    /* ============================================================
+   SECTION LAYOUT
+============================================================ */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 5vw, 3rem);
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 1rem;
+    }
+
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 1px;
+      background: var(--blue);
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4.5vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      color: var(--text-1);
+      margin-bottom: 1.2rem;
+    }
+
+    .section-title em {
+      font-style: normal;
+      background: linear-gradient(90deg, var(--blue) 0%, var(--orange) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-sub {
+      font-size: clamp(0.95rem, 2vw, 1.05rem);
+      color: var(--text-2);
+      font-weight: 300;
+      max-width: 540px;
+      line-height: 1.75;
+    }
+
+    .section-header {
+      margin-bottom: 3.5rem;
+    }
+
+    /* ============================================================
+   SERVICES
+============================================================ */
+    .services-section {
+      padding: clamp(4rem, 8vw, 8rem) 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--blue-glow), transparent);
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .service-card:hover {
+      border-color: var(--blue-border);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--blue-deep), var(--blue));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.4rem;
+    }
+
+    .service-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: #fff;
+      fill: none;
+    }
+
+    .service-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-1);
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.02em;
+    }
+
+    .service-desc {
+      font-size: 0.875rem;
+      color: var(--text-2);
+      line-height: 1.7;
+      margin-bottom: 1.4rem;
+    }
+
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      background: var(--blue-glow);
+      color: var(--blue);
+      border: 1px solid var(--blue-border);
+      padding: 3px 10px;
+      border-radius: 50px;
+    }
+
+    /* ============================================================
+   WHY KODEVASOFT (FEATURES)
+============================================================ */
+    .features-section {
+      padding: clamp(4rem, 8vw, 8rem) 0;
+      background: var(--bg-2);
+      position: relative;
+      z-index: 1;
+    }
+
+    .features-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .features-visual {
+      position: relative;
+      height: 490px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .feat-mockup-main {
+      position: absolute;
+      inset: 20px;
+    }
+
+    .feat-mockup-topbar {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .mockup-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .mockup-dot-r {
+      background: #FF5F56;
+    }
+
+    .mockup-dot-y {
+      background: #FFBD2E;
+    }
+
+    .mockup-dot-g {
+      background: #27C93F;
+    }
+
+    .mockup-bar {
+      height: 6px;
+      background: var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .mockup-bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, var(--blue-deep), var(--blue));
+    }
+
+    .mockup-line {
+      height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      margin-bottom: 8px;
+    }
+
+    .mockup-card-sm {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px;
+      font-size: 0.72rem;
+      color: var(--text-2);
+      margin-bottom: 8px;
+    }
+
+    .feat-card-float {
+      position: absolute;
+      bottom: -12px;
+      right: -12px;
+      width: 150px;
+      background: var(--bg-card);
+      border: 1px solid var(--gold-dim);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      backdrop-filter: blur(10px);
+      animation: floatBob 4s ease-in-out infinite 1s;
+    }
+
+    .feat-float-num {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+
+    .feat-float-label {
+      font-size: 0.7rem;
+      color: var(--text-3);
+      margin-top: 2px;
+    }
+
+    .features-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+    }
+
+    .feat-check {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--blue-deep), var(--blue));
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .feat-check svg {
+      width: 14px;
+      height: 14px;
+      stroke: #fff;
+    }
+
+    .feat-text-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-1);
+      margin-bottom: 4px;
+      letter-spacing: -0.01em;
+    }
+
+    .feat-text-desc {
+      font-size: 0.875rem;
+      color: var(--text-2);
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+   PROCESS
+============================================================ */
+    .process-section {
+      padding: clamp(4rem, 8vw, 8rem) 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+      position: relative;
+    }
+
+    .process-step {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem;
+      backdrop-filter: blur(8px);
+      position: relative;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+
+    .process-step:hover {
+      border-color: var(--blue-border);
+      transform: translateY(-3px);
+    }
+
+    .process-num {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--blue-border);
+      line-height: 1;
+      margin-bottom: 1rem;
+      letter-spacing: -0.04em;
+    }
+
+    .process-step-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-1);
+      margin-bottom: 0.6rem;
+    }
+
+    .process-step-desc {
+      font-size: 0.85rem;
+      color: var(--text-2);
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+   SAAS / PRODUCTS
+============================================================ */
+    .saas-section {
+      padding: clamp(4rem, 8vw, 8rem) 0;
+      background: var(--bg-2);
+      position: relative;
+      z-index: 1;
+    }
+
+    .saas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .saas-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+
+    .saas-card:hover {
+      border-color: var(--blue-border);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-card);
+    }
+
+    .saas-card-header {
+      padding: 2rem 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .saas-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--blue-glow), var(--gold-dim));
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .saas-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--blue);
+      fill: none;
+    }
+
+    .saas-badge {
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .saas-badge-live {
+      background: rgba(34, 197, 94, 0.12);
+      color: #22C55E;
+      border: 1px solid rgba(34, 197, 94, 0.25);
+    }
+
+    .saas-badge-soon {
+      background: var(--gold-dim);
+      color: var(--gold-light);
+      border: 1px solid rgba(212, 160, 23, 0.3);
+    }
+
+    .saas-card-body {
+      padding: 1.5rem 2rem 2rem;
+    }
+
+    .saas-card-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-1);
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.02em;
+    }
+
+    .saas-card-desc {
+      font-size: 0.875rem;
+      color: var(--text-2);
+      line-height: 1.7;
+      margin-bottom: 1.4rem;
+    }
+
+    .saas-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .saas-features li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--text-2);
+    }
+
+    .saas-features li::before {
+      content: '✓';
+      color: #22C55E;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .saas-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--blue);
+      padding: 8px 0;
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--transition);
+    }
+
+    .saas-cta:hover {
+      border-color: var(--blue);
+    }
+
+    /* ============================================================
+   TESTIMONIALS
+============================================================ */
+    .testimonials-section {
+      padding: clamp(4rem, 8vw, 8rem) 0;
+      position: relative;
+      overflow: hidden;
+      /* Vital para que no aparezca scroll horizontal */
+    }
+
+    /* El contenedor que limita la vista */
+    .testimonials-container {
+      width: 100%;
+      padding: 3rem 0;
+      position: relative;
+      display: flex;
+    }
+
+    /* El riel que se mueve */
+    .testimonials-track {
+      display: flex;
+      gap: 1.5rem;
+      width: max-content;
+      animation: infinite-scroll 45s linear infinite;
+      /* Tiempo total del ciclo */
+    }
+
+    /* Pausar al pasar el mouse */
+    .testimonials-track:hover {
+      animation-play-state: paused;
+    }
+
+    /* Ajuste de la tarjeta para que sea responsiva */
+    .testimonial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+      width: 320px;
+      /* Tamaño ideal en móvil y escritorio */
+      flex-shrink: 0;
+      /* Evita que se aplaste */
+      transition: border-color var(--transition), transform var(--transition);
+    }
+
+    /* Media query para pantallas muy pequeñas */
+    @media (max-width: 480px) {
+      .testimonial-card {
+        width: 280px;
+        padding: 1.5rem;
+      }
+    }
+
+    .testimonial-card:hover {
+      border-color: var(--blue-border);
+      transform: translateY(-5px);
+    }
+
+    /* ESTILOS INTERNOS (Tus estilos originales mantenidos) */
+    .stars {
+      color: var(--gold);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+    }
+
+    .testimonial-quote {
+      font-size: 0.9rem;
+      color: var(--text-2);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .author-avatar {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue-deep), var(--blue));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 800;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    .author-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-1);
+    }
+
+    .author-role {
+      font-size: 0.78rem;
+      color: var(--text-3);
+    }
+
+    /* ANIMACIÓN */
+    @keyframes infinite-scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(calc(-320px * 10 - 1.5rem * 10));
+      }
+
+      /* Nota: Mueve exactamente el ancho de 10 tarjetas + sus gaps */
+    }
+
+    /* Efecto de desvanecimiento a los lados (Opcional, queda muy profesional) */
+    .testimonials-container::before,
+    .testimonials-container::after {
+      content: "";
+      height: 100%;
+      width: 15%;
+      position: absolute;
+      top: 0;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .testimonials-container::before {
+      left: 0;
+      background: linear-gradient(to right, var(--bg-body), transparent);
+    }
+
+    .testimonials-container::after {
+      right: 0;
+      background: linear-gradient(to left, var(--bg-body), transparent);
+    }
+
+    /* ============================================================
+   CTA SECTION
+============================================================ */
+    .cta-section {
+      padding: clamp(4rem, 8vw, 8rem) 0;
+      position: relative;
+      z-index: 1;
+      background: var(--bg-2);
+    }
+
+    .cta-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    /* ============================================================
+   FOOTER
+============================================================ */
+    footer {
+      padding: clamp(3rem, 6vw, 5rem) 0 2rem;
+      border-top: 1px solid var(--border);
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 5vw, 3rem);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr repeat(3, 1fr);
+      gap: clamp(2rem, 4vw, 4rem);
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+
+    .footer-brand-desc {
+      font-size: 0.875rem;
+      color: var(--text-2);
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.75;
+      max-width: 260px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-btn {
+      width: 34px;
+      height: 34px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-2);
+      transition: all var(--transition);
+    }
+
+    .social-btn:hover {
+      background: var(--blue-glow);
+      border-color: var(--blue-border);
+      color: var(--blue);
+    }
+
+    .social-btn svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .footer-col-title {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-1);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .footer-links a {
+      font-size: 0.85rem;
+      color: var(--text-2);
+      transition: color var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--text-1);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--text-3);
+    }
+
+    .footer-copy span {
+      color: var(--orange);
+    }
+
+    /* ============================================================
+   QUOTE FORM OVERLAY (NUEVA EXTENSIÓN)
+============================================================ */
+    .quote-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(4, 8, 15, 0.85);
+      backdrop-filter: blur(20px) saturate(180%);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 40px 20px;
+      overflow-y: auto;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .quote-overlay.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .quote-panel {
+      background: var(--quote-panel);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-xl);
+      width: 100%;
+      max-width: 860px;
+      overflow: hidden;
+      box-shadow: 0 40px 120px rgba(0, 0, 0, 0.7), 0 0 0 1px var(--blue-border);
+      transform: translateY(40px) scale(0.97);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      margin: auto;
+    }
+
+    .quote-overlay.open .quote-panel {
+      transform: translateY(0) scale(1);
+    }
+
+    /* Quote Panel Header */
+    .qp-header {
+      background: linear-gradient(135deg, rgba(27, 79, 216, 0.2), rgba(59, 130, 246, 0.1));
+      border-bottom: 1px solid var(--border);
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .qp-header-left {
+      flex: 1;
+    }
+
+    .qp-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 71, 0, 0.12);
+      border: 1px solid rgba(255, 71, 0, 0.25);
+      border-radius: 50px;
+      padding: 4px 12px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--orange);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .qp-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text-1);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .qp-subtitle {
+      font-size: 0.875rem;
+      color: var(--text-2);
+      line-height: 1.6;
+      max-width: 500px;
+    }
+
+    .qp-close {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: all 0.2s;
+      color: var(--text-2);
+    }
+
+    .qp-close:hover {
+      background: rgba(255, 71, 0, 0.1);
+      border-color: rgba(255, 71, 0, 0.3);
+      color: var(--orange);
+    }
+
+    .qp-close svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Steps indicator */
+    .qp-steps {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      padding: 1.25rem 2.5rem;
+      background: rgba(255, 255, 255, 0.02);
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+    }
+
+    .qp-step {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .qp-step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--text-3);
+      transition: all 0.3s;
+    }
+
+    .qp-step.active .qp-step-num {
+      border-color: var(--blue);
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .qp-step.done .qp-step-num {
+      border-color: #22C55E;
+      background: #22C55E;
+      color: #fff;
+    }
+
+    .qp-step-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-3);
+      white-space: nowrap;
+    }
+
+    .qp-step.active .qp-step-label {
+      color: var(--text-1);
+    }
+
+    .qp-step.done .qp-step-label {
+      color: #22C55E;
+    }
+
+    .qp-step-line {
+      flex: 1;
+      min-width: 24px;
+      height: 1px;
+      background: var(--border);
+      margin: 0 8px;
+    }
+
+    .qp-step.done+.qp-step-line {
+      background: #22C55E;
+    }
+
+    /* Quote Body */
+    .qp-body {
+      padding: 2rem 2.5rem;
+    }
+
+    /* Step panels */
+    .qstep {
+      display: none;
+    }
+
+    .qstep.active {
+      display: block;
+      animation: fadeInUp 0.3s ease;
+    }
+
+    /* Form groups */
+    .qp-section-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-1);
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .qp-section-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, var(--blue-deep), var(--blue));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qp-section-icon svg {
+      width: 14px;
+      height: 14px;
+      stroke: #fff;
+      fill: none;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 1.5rem;
+    }
+
+    .form-grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem 1.25rem;
+    }
+
+    .form-full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-2);
+      letter-spacing: 0.02em;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .form-label .required {
+      color: var(--orange);
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      color: var(--text-1);
+      transition: all 0.2s;
+      outline: none;
+      width: 100%;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--blue);
+      background: rgba(59, 130, 246, 0.06);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: var(--text-3);
+    }
+
+    .form-select {
+      appearance: none;
+      cursor: pointer;
+    }
+
+    .form-select option {
+      background: #0A1628;
+      color: var(--text-1);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 100px;
+      line-height: 1.6;
+    }
+
+    .form-hint {
+      font-size: 0.72rem;
+      color: var(--text-3);
+      line-height: 1.4;
+      margin-top: 2px;
+    }
+
+    /* Service type cards */
+    .service-type-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .service-type-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1rem 0.875rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+    }
+
+    .service-type-card:hover {
+      border-color: var(--blue-border);
+      background: var(--blue-glow);
+    }
+
+    .service-type-card.selected {
+      border-color: var(--blue);
+      background: var(--blue-glow);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+
+    .st-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, var(--blue-glow), transparent);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.6rem;
+    }
+
+    .st-icon svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--blue);
+      fill: none;
+    }
+
+    .st-name {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-2);
+      line-height: 1.3;
+    }
+
+    .service-type-card.selected .st-name {
+      color: var(--text-1);
+    }
+
+    /* Budget slider */
+    .budget-display {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .budget-amount {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text-1);
+      letter-spacing: -0.03em;
+    }
+
+    .budget-unit {
+      font-size: 0.875rem;
+      color: var(--text-3);
+      margin-top: 2px;
+    }
+
+    .range-input {
+      width: 100%;
+      height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      outline: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+      background: linear-gradient(to right, var(--blue) 0%, var(--blue) var(--val, 30%), var(--border) var(--val, 30%), var(--border) 100%);
+    }
+
+    .range-input::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--blue);
+      border: 3px solid var(--bg);
+      box-shadow: 0 0 0 2px var(--blue), 0 4px 12px rgba(59, 130, 246, 0.4);
+      cursor: pointer;
+    }
+
+    .range-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      color: var(--text-3);
+      margin-top: 0.5rem;
+    }
+
+    /* Priority badges */
+    .priority-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .priority-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1.5px solid var(--border);
+      border-radius: 50px;
+      padding: 6px 14px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-2);
+      cursor: pointer;
+      transition: all 0.2s;
+      user-select: none;
+    }
+
+    .priority-badge:hover {
+      border-color: var(--blue-border);
+      color: var(--text-1);
+    }
+
+    .priority-badge.selected {
+      border-color: var(--blue);
+      background: var(--blue-glow);
+      color: var(--blue);
+    }
+
+    .priority-badge.selected-orange {
+      border-color: var(--orange);
+      background: var(--orange-dim);
+      color: var(--orange);
+    }
+
+    /* Checkbox group */
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 9px 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 0.82rem;
+      color: var(--text-2);
+      user-select: none;
+    }
+
+    .check-item:hover {
+      border-color: var(--blue-border);
+    }
+
+    .check-item.checked {
+      border-color: var(--blue);
+      background: var(--blue-glow);
+      color: var(--text-1);
+    }
+
+    .check-box {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.2s;
+    }
+
+    .check-item.checked .check-box {
+      background: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .check-box-mark {
+      display: none;
+      width: 8px;
+      height: 8px;
+    }
+
+    .check-item.checked .check-box-mark {
+      display: block;
+      stroke: #fff;
+    }
+
+    /* Timeline picker */
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 0.6rem;
+    }
+
+    .timeline-opt {
+      text-align: center;
+      padding: 0.75rem 0.5rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .timeline-opt:hover {
+      border-color: var(--blue-border);
+    }
+
+    .timeline-opt.selected {
+      border-color: var(--blue);
+      background: var(--blue-glow);
+    }
+
+    .timeline-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-2);
+      display: block;
+    }
+
+    .timeline-opt.selected .timeline-label {
+      color: var(--text-1);
+    }
+
+    .timeline-sub {
+      font-size: 0.65rem;
+      color: var(--text-3);
+      margin-top: 2px;
+      display: block;
+    }
+
+    /* Summary step */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .summary-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+    }
+
+    .summary-card-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-3);
+      margin-bottom: 0.3rem;
+    }
+
+    .summary-card-val {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-1);
+    }
+
+    .summary-price-box {
+      background: linear-gradient(135deg, rgba(255, 71, 0, 0.08), rgba(59, 130, 246, 0.08));
+      border: 1px solid var(--orange);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .spr-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-3);
+      margin-bottom: 0.5rem;
+    }
+
+    .spr-amount {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--orange);
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    .spr-currency {
+      font-size: 1.2rem;
+      vertical-align: super;
+    }
+
+    .spr-disclaimer {
+      font-size: 0.72rem;
+      color: var(--text-3);
+      margin-top: 0.5rem;
+      line-height: 1.5;
+    }
+
+    .summary-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .sum-tag {
+      font-size: 0.72rem;
+      font-weight: 500;
+      background: var(--blue-glow);
+      border: 1px solid var(--blue-border);
+      color: var(--blue);
+      padding: 3px 10px;
+      border-radius: 50px;
+      font-family: var(--font-mono);
+    }
+
+    /* Nav footer */
+    .qp-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      border-top: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .qp-footer-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .qp-footer-info {
+      font-size: 0.78rem;
+      color: var(--text-3);
+    }
+
+    .qp-footer-info strong {
+      color: var(--text-2);
+    }
+
+    .qp-btn-back {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-2);
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .qp-btn-back:hover {
+      border-color: var(--blue-border);
+      color: var(--text-1);
+    }
+
+    .qp-btn-next {
+      background: linear-gradient(135deg, var(--blue-deep), var(--blue));
+      color: #fff;
+      padding: 10px 28px;
+      border-radius: var(--radius-sm);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+    }
+
+    .qp-btn-next:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 24px rgba(59, 130, 246, 0.4);
+    }
+
+    .qp-btn-submit {
+      background: linear-gradient(135deg, var(--orange), #ff6a35);
+      color: #fff;
+      padding: 10px 28px;
+      border-radius: var(--radius-sm);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 16px rgba(255, 71, 0, 0.3);
+    }
+
+    .qp-btn-submit:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 24px rgba(255, 71, 0, 0.45);
+    }
+
+    /* Success screen */
+    .qp-success {
+      text-align: center;
+      padding: 3rem 2rem;
+      display: none;
+    }
+
+    .qp-success.show {
+      display: block;
+      animation: fadeInUp 0.5s ease;
+    }
+
+    .success-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(34, 197, 94, 0.1);
+      border: 2px solid #22C55E;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+
+    .success-icon svg {
+      width: 36px;
+      height: 36px;
+      stroke: #22C55E;
+    }
+
+    .success-title {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--text-1);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.03em;
+    }
+
+    .success-desc {
+      font-size: 0.9rem;
+      color: var(--text-2);
+      line-height: 1.8;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+
+    /* ============================================================
+   ANIMATIONS
+============================================================ */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatBob {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+      }
+
+      50% {
+        box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+      }
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================================================
+   RESPONSIVE
+============================================================ */
+    @media (max-width: 1024px) {
+      .features-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .features-visual {
+        height: 260px;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .form-grid-3 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      .nav-links,
+      .btn-nav-cta,
+      .toggle-pill {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
+
+      .form-grid,
+      .form-grid-3,
+      .summary-grid,
+      .checkbox-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .qp-body {
+        padding: 1.5rem;
+      }
+
+      .qp-header,
+      .qp-footer,
+      .qp-steps {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .hero-actions,
+      .cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-actions .btn-cta,
+      .hero-actions .btn-cta-orange,
+      .hero-actions .btn-outline {
+        text-align: center;
+        justify-content: center;
+      }
+    }
+
+    [data-lang="es"] [data-en] {
+      display: none !important;
+    }
+
+    [data-lang="en"] [data-es] {
+      display: none !important;
+    }
+
+    .code-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1rem;
+      background: var(--blue, #528bff);
+      margin-left: 2px;
+      animation: blink 1s infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareBusiness",
+      "name": "KodevaSoft",
+      "url": "https://kodevasoft.space",
+      "logo": "https://kodevasoft.space/img/kodeva.webp",
+      "image": "https://kodevasoft.space/img/kodeva.webp",
+      "description": "Desarrollo de software a medida, SaaS y consultoría tecnológica avanzada en Cúcuta, Norte de Santander.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cúcuta",
+        "addressRegion": "Norte de Santander",
+        "addressCountry": "CO"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+573174485239",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+</head>
+
+<body>
+
+  <canvas id="particles"></canvas>
+
+  <!-- ═══ NAV ═══ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-img">
+          <img src="./img/kodeva.webp" alt="KodevaSoft Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        <span class="nav-logo-name">Kodeva<span>Soft</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services" data-es>Servicios</a><a href="#services" data-en>Services</a></li>
+        <li><a href="#why" data-es>Nosotros</a><a href="#why" data-en>About</a></li>
+        <li><a href="#saas" data-es>Productos</a><a href="#saas" data-en>Products</a></li>
+        <li><a href="#testimonials" data-es>Clientes</a><a href="#testimonials" data-en>Clients</a></li>
+        <li><a href="#contact" data-es>Contacto</a><a href="#contact" data-en>Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <div class="toggle-pill" id="langToggle">
+          <button class="active" data-l="es">ES</button>
+          <button data-l="en">EN</button>
+        </div>
+        <div class="toggle-pill" id="themeToggle">
+          <button class="active" data-t="dark">🌙</button>
+          <button data-t="light">☀️</button>
+        </div>
+        <button class="btn-nav-cta" onclick="openQuote()" data-es>Cotizar proyecto</button>
+        <button class="btn-nav-cta" onclick="openQuote()" data-en>Get a quote</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-drawer" id="navDrawer">
+    <a href="#services" onclick="closeDrawer()" data-es>Servicios</a>
+    <a href="#services" onclick="closeDrawer()" data-en>Services</a>
+    <a href="#why" onclick="closeDrawer()" data-es>Nosotros</a>
+    <a href="#why" onclick="closeDrawer()" data-en>About</a>
+    <a href="#saas" onclick="closeDrawer()" data-es>Productos</a>
+    <a href="#saas" onclick="closeDrawer()" data-en>Products</a>
+    <a href="#testimonials" onclick="closeDrawer()" data-es>Clientes</a>
+    <a href="#testimonials" onclick="closeDrawer()" data-en>Clients</a>
+    <div class="drawer-controls">
+      <div class="toggle-pill" id="langToggleMobile">
+        <button class="active" data-l="es">ES</button>
+        <button data-l="en">EN</button>
+      </div>
+      <div class="toggle-pill" id="themeToggleMobile">
+        <button class="active" data-t="dark">🌙</button>
+        <button data-t="light">☀️</button>
+      </div>
+      <button class="btn-nav-cta" onclick="openQuote(); closeDrawer();" data-es>Cotizar</button>
+      <button class="btn-nav-cta" onclick="openQuote(); closeDrawer();" data-en>Get quote</button>
+    </div>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+
+    <div class="hero-inner">
+
+      <div class="hero-main-row">
+
+        <div class="hero-content">
+          <div class="hero-badge">
+            <div class="badge-dot"></div>
+            <span data-es>Software de Alto Impacto · Cúcuta, Colombia</span>
+            <span data-en>High-Impact Software · Cúcuta, Colombia</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span data-es>Construimos el software<br><span class="t2">que mueve tu negocio</span></span>
+            <span data-en>We build the software<br><span class="t2">that moves your business</span></span>
+          </h1>
+
+          <p class="hero-sub" data-es>
+            Ingeniería de software premium, plataformas SaaS a medida y soluciones digitales que convierten ideas
+            complejas en productos que dominan su mercado.
+          </p>
+          <p class="hero-sub" data-en>
+            Premium software engineering, custom SaaS platforms and digital solutions that turn complex ideas into
+            market-leading products.
+          </p>
+
+          <div class="hero-actions reveal">
+            <button class="btn-cta-orange" onclick="openQuote()">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              <span data-es>Cotizar mi proyecto</span>
+              <span data-en>Quote my project</span>
+            </button>
+            <a href="#services" class="btn-outline" data-es>Ver servicios →</a>
+            <a href="#services" class="btn-outline" data-en>View services →</a>
+          </div>
+        </div>
+
+        <div class="hero-mascot-wrap">
+          <div class="hero-mascot-ring">
+            <div class="mascot-orbit">
+              <div class="mascot-dot"></div>
+            </div>
+            <div class="mascot-orbit mascot-orbit-2"></div>
+            <div class="mascot-inner">
+              <img src="./img/kori.webp" alt="KIRO" class="mascot-img"
+                id="mascota-img">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-bottom-content">
+
+        <div class="hero-code-editor reveal">
+          <div class="code-editor-topbar">
+            <span class="code-dot code-dot-r"></span>
+            <span class="code-dot code-dot-y"></span>
+            <span class="code-dot code-dot-g"></span>
+
+            <div class="code-editor-tabs">
+              <div class="code-tab active" onclick="switchTab(this, 'tab1')">dashboard.tsx</div>
+              <div class="code-tab" onclick="switchTab(this, 'tab2')">metrics.ts</div>
+              <div class="code-tab" onclick="switchTab(this, 'tab3')">deploy.yml</div>
+            </div>
+
+            <div class="code-editor-status">
+              <span class="code-status-dot"></span>
+              <span data-es>Compilando…</span><span data-en>Compiling…</span>
+            </div>
+          </div>
+
+          <div class="code-editor-body">
+            <div class="code-line-nums" id="line-nums"></div>
+            <div class="code-content" id="code-content"></div>
+          </div>
+
+          <div class="code-editor-footer">
+            <div class="code-footer-left">
+              <div class="code-footer-item">Ln <span>12</span></div>
+              <div class="code-footer-item">Col <span>34</span></div>
+              <div class="code-footer-item">TypeScript <span>5.4</span></div>
+            </div>
+            <div class="code-footer-right">
+              <span data-es>✓ Sin errores · KodevaSoft Build v2.4</span>
+              <span data-en>✓ No errors · KodevaSoft Build v2.4</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-stats-row reveal">
+          <div class="stat-item">
+            <div class="stat-num"><span class="count" data-target="28">0</span>+</div>
+            <div class="stat-label" data-es>Proyectos entregados</div>
+            <div class="stat-label" data-en>Projects delivered</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num"><span class="count" data-target="98">0</span>%</div>
+            <div class="stat-label" data-es>Satisfacción cliente</div>
+            <div class="stat-label" data-en>Client satisfaction</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num"><span class="count" data-target="4">0</span>+</div>
+            <div class="stat-label" data-es>Años de experiencia</div>
+            <div class="stat-label" data-en>Years of experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num"><span class="count" data-target="12">0</span></div>
+            <div class="stat-label" data-es>Tecnologías activas</div>
+            <div class="stat-label" data-en>Active technologies</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ LOGOS MARQUEE ═══ -->
+  <div class="logos-section">
+    <div class="logos-label" data-es>Tecnologías que dominamos</div>
+    <div class="logos-label" data-en>Technologies we master</div>
+    <div style="overflow:hidden;padding:0 2rem">
+      <div class="marquee-track">
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/react/61DAFB" width="16" height="16"
+            alt="React">React</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/firebase/FFCA28" width="16" height="16"
+            alt="Firebase">Firebase</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/nodedotjs/339933" width="16" height="16"
+            alt="Node.js">Node.js</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/typescript/3178C6" width="16" height="16"
+            alt="TypeScript">TypeScript</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/nextdotjs/000000/ffffff" width="16" height="16"
+            alt="Next.js">Next.js</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/flutter/02569B" width="16" height="16"
+            alt="Flutter">Flutter</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/python/3776AB" width="16" height="16"
+            alt="Python">Python</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/postgresql/4169E1" width="16" height="16"
+            alt="PostgreSQL">PostgreSQL</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/mongodb/47A248" width="16" height="16"
+            alt="MongoDB">MongoDB</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/docker/2496ED" width="16" height="16"
+            alt="Docker">Docker</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/amazonaws/232F3E/ffffff" width="16" height="16"
+            alt="AWS">AWS</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/figma/F24E1E" width="16" height="16"
+            alt="Figma">Figma</div>
+
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/react/61DAFB" width="16" height="16"
+            alt="React">React</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/firebase/FFCA28" width="16" height="16"
+            alt="Firebase">Firebase</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/nodedotjs/339933" width="16" height="16"
+            alt="Node.js">Node.js</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/typescript/3178C6" width="16" height="16"
+            alt="TypeScript">TypeScript</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/nextdotjs/000000/ffffff" width="16" height="16"
+            alt="Next.js">Next.js</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/flutter/02569B" width="16" height="16"
+            alt="Flutter">Flutter</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/python/3776AB" width="16" height="16"
+            alt="Python">Python</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/postgresql/4169E1" width="16" height="16"
+            alt="PostgreSQL">PostgreSQL</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/mongodb/47A248" width="16" height="16"
+            alt="MongoDB">MongoDB</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/docker/2496ED" width="16" height="16"
+            alt="Docker">Docker</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/amazonaws/232F3E/ffffff" width="16" height="16"
+            alt="AWS">AWS</div>
+        <div class="logo-pill"><img src="https://cdn.simpleicons.org/figma/F24E1E" width="16" height="16"
+            alt="Figma">Figma</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ SERVICES ═══ -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label" data-es>Servicios</div>
+        <div class="section-label" data-en>Services</div>
+        <h2 class="section-title" data-es>Lo que construimos<br><em>para tu empresa</em></h2>
+        <h2 class="section-title" data-en>What we build<br><em>for your company</em></h2>
+        <p class="section-desc" style="margin-top:1rem" data-es>Desde aplicaciones web complejas hasta sistemas
+          empresariales de gran escala. Cada línea de código, con propósito.</p>
+        <p class="section-desc" style="margin-top:1rem" data-en>From complex web apps to large-scale enterprise systems.
+          Every line of code, with purpose.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" stroke-width="1.5">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+          </div>
+          <div class="service-title" data-es>Desarrollo Web a Medida</div>
+          <div class="service-title" data-en>Custom Web Development</div>
+          <p class="service-desc" data-es>Aplicaciones web de alto rendimiento con arquitecturas modernas, escalables y
+            diseñadas para crecer contigo.</p>
+          <p class="service-desc" data-en>High-performance web applications with modern, scalable architectures designed
+            to grow with you.</p>
+          <div class="service-tags">
+            <span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Node.js</span><span
+              class="tag">TypeScript</span>
+          </div>
+        </div>
+        <div class="service-card reveal" style="transition-delay:0.1s">
+          <div class="service-icon" style="background:linear-gradient(135deg,#7C3AED,#A78BFA)">
+            <svg viewBox="0 0 24 24" stroke-width="1.5">
+              <rect x="5" y="2" width="14" height="20" rx="2" />
+              <line x1="12" y1="18" x2="12.01" y2="18" />
+            </svg>
+          </div>
+          <div class="service-title" data-es>Apps Móviles</div>
+          <div class="service-title" data-en>Mobile Apps</div>
+          <p class="service-desc" data-es>Aplicaciones móviles nativas y multiplataforma con experiencias de usuario que
+            convierten y retienen.</p>
+          <p class="service-desc" data-en>Native and cross-platform mobile apps with user experiences that convert and
+            retain.</p>
+          <div class="service-tags">
+            <span class="tag">Flutter</span><span class="tag">React Native</span><span class="tag">iOS</span><span
+              class="tag">Android</span>
+          </div>
+        </div>
+        <div class="service-card reveal" style="transition-delay:0.2s">
+          <div class="service-icon" style="background:linear-gradient(135deg,#047857,#10B981)">
+            <svg viewBox="0 0 24 24" stroke-width="1.5">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+          </div>
+          <div class="service-title" data-es>Plataformas SaaS</div>
+          <div class="service-title" data-en>SaaS Platforms</div>
+          <p class="service-desc" data-es>Construimos tu producto SaaS desde cero con autenticación, billing,
+            multitenancy y dashboards premium.</p>
+          <p class="service-desc" data-en>We build your SaaS product from scratch with auth, billing, multitenancy and
+            premium dashboards.</p>
+          <div class="service-tags">
+            <span class="tag">Firebase</span><span class="tag">Stripe</span><span class="tag">SaaS</span><span
+              class="tag">Multi-tenant</span>
+          </div>
+        </div>
+        <div class="service-card reveal" style="transition-delay:0.3s">
+          <div class="service-icon" style="background:linear-gradient(135deg,#9A3412,var(--orange))">
+            <svg viewBox="0 0 24 24" stroke-width="1.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <div class="service-title" data-es>Sistemas Empresariales</div>
+          <div class="service-title" data-en>Enterprise Systems</div>
+          <p class="service-desc" data-es>ERPs, CRMs y plataformas de gestión a medida para optimizar cada proceso de tu
+            empresa.</p>
+          <p class="service-desc" data-en>Custom ERPs, CRMs and management platforms to optimize every process in your
+            company.</p>
+          <div class="service-tags">
+            <span class="tag">ERP</span><span class="tag">CRM</span><span class="tag">API REST</span><span
+              class="tag">Cloud</span>
+          </div>
+        </div>
+        <div class="service-card reveal" style="transition-delay:0.1s">
+          <div class="service-icon" style="background:linear-gradient(135deg,#0E7490,#22D3EE)">
+            <svg viewBox="0 0 24 24" stroke-width="1.5">
+              <ellipse cx="12" cy="5" rx="9" ry="3" />
+              <path d="M21 12c0 1.66-4.03 3-9 3S3 13.66 3 12" />
+              <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5" />
+            </svg>
+          </div>
+          <div class="service-title" data-es>Backend & APIs</div>
+          <div class="service-title" data-en>Backend & APIs</div>
+          <p class="service-desc" data-es>Arquitecturas de backend robustas, APIs RESTful y GraphQL con autenticación,
+            caché y monitoreo.</p>
+          <p class="service-desc" data-en>Robust backend architectures, RESTful and GraphQL APIs with authentication,
+            caching and monitoring.</p>
+          <div class="service-tags">
+            <span class="tag">REST API</span><span class="tag">GraphQL</span><span class="tag">PostgreSQL</span><span
+              class="tag">Redis</span>
+          </div>
+        </div>
+        <div class="service-card reveal" style="transition-delay:0.2s">
+          <div class="service-icon" style="background:linear-gradient(135deg,#5B21B6,#8B5CF6)">
+            <svg viewBox="0 0 24 24" stroke-width="1.5">
+              <circle cx="12" cy="12" r="3" />
+              <path
+                d="M19.07 4.93l-1.41 1.41M5.34 18.66l-1.41 1.41M2 12h2M20 12h2M19.07 19.07l-1.41-1.41M5.34 5.34L3.93 3.93M12 2v2M12 20v2" />
+            </svg>
+          </div>
+          <div class="service-title" data-es>Consultoría & Arquitectura</div>
+          <div class="service-title" data-en>Consulting & Architecture</div>
+          <p class="service-desc" data-es>Asesorías técnicas, revisión de código, planificación de sprints y
+            arquitectura de sistemas complejos.</p>
+          <p class="service-desc" data-en>Technical consulting, code reviews, sprint planning and complex system
+            architecture design.</p>
+          <div class="service-tags">
+            <span class="tag">Tech Strategy</span><span class="tag">Code Review</span><span class="tag">DevOps</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FEATURES / WHY ═══ -->
+  <section class="features-section" id="why">
+    <div class="container">
+      <div class="features-layout">
+        <div class="reveal">
+          <div class="section-label" data-es>¿Por qué KodevaSoft?</div>
+          <div class="section-label" data-en>Why KodevaSoft?</div>
+          <h2 class="section-title" style="margin-bottom:1rem" data-es>Ingeniería que<br><em>genera resultados</em></h2>
+          <h2 class="section-title" style="margin-bottom:1rem" data-en>Engineering that<br><em>generates results</em>
+          </h2>
+          <div class="features-list">
+            <div class="feature-item">
+              <div class="feat-check"><svg viewBox="0 0 24 24" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              <div>
+                <div class="feat-text-title" data-es>Código de producción, no demos</div>
+                <div class="feat-text-title" data-en>Production code, not demos</div>
+                <p class="feat-text-desc" data-es>Cada proyecto es desplegado, documentado y entregado listo para
+                  escalar. Sin código descartable.</p>
+                <p class="feat-text-desc" data-en>Every project is deployed, documented and delivered ready to scale. No
+                  throwaway code.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feat-check"><svg viewBox="0 0 24 24" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              <div>
+                <div class="feat-text-title" data-es>Comunicación directa siempre</div>
+                <div class="feat-text-title" data-en>Direct communication always</div>
+                <p class="feat-text-desc" data-es>Hablas directamente con el desarrollador. Sin capas de gerencia, sin
+                  intermediarios, sin sorpresas.</p>
+                <p class="feat-text-desc" data-en>You talk directly to the developer. No management layers, no
+                  middlemen, no surprises.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feat-check"><svg viewBox="0 0 24 24" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              <div>
+                <div class="feat-text-title" data-es>98% entregado a tiempo</div>
+                <div class="feat-text-title" data-en>98% delivered on time</div>
+                <p class="feat-text-desc" data-es>Los plazos no son sugerencias. Cada sprint tiene entregables concretos
+                  y fechas que se respetan.</p>
+                <p class="feat-text-desc" data-en>Deadlines aren't suggestions. Every sprint has concrete deliverables
+                  and dates that are respected.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feat-check"><svg viewBox="0 0 24 24" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              <div>
+                <div class="feat-text-title" data-es>Soporte post-entrega incluido</div>
+                <div class="feat-text-title" data-en>Post-delivery support included</div>
+                <p class="feat-text-desc" data-es>30 días de soporte gratuito después del lanzamiento. Tu producto,
+                  estable desde el día uno.</p>
+                <p class="feat-text-desc" data-en>30 days of free support after launch. Your product, stable from day
+                  one.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal" style="position:relative;transition-delay:0.2s">
+          <div class="features-visual">
+            <div class="feat-mockup-main">
+              <div class="feat-mockup-topbar">
+                <span class="mockup-dot mockup-dot-r"></span>
+                <span class="mockup-dot mockup-dot-y"></span>
+                <span class="mockup-dot mockup-dot-g"></span>
+              </div>
+        
+              <div class="mockup-bar">
+                <div class="mockup-bar-fill" style="width:92%"></div>
+              </div>
+              <div style="text-align:right;font-family:var(--font-mono);font-size:0.6rem;color:var(--text-3);margin-top:2px">
+                Build: stable v2.4.0-release
+              </div>
+        
+              <div class="mockup-card-sm">
+                <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-3);margin-bottom:4px">
+                  // engine/core-services
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <span style="font-weight:600;color:var(--text-1)">API Gateway</span>
+                  <span style="color:#22C55E;font-size:0.68rem;display:flex;align-items:center;gap:3px">
+                    <span style="animation:pulse 1.5s infinite">●</span> Online
+                  </span>
+                </div>
+              </div>
+        
+              <div class="mockup-card-sm">
+                <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-3);margin-bottom:4px">
+                  // cloud/deployment-hub
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <span style="font-weight:600;color:var(--text-1)">Production Cluster</span>
+                  <span style="color:var(--gold-light);font-size:0.68rem">✓ Verified</span>
+                </div>
+              </div>
+        
+              <div class="mockup-card-sm">
+                <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-3);margin-bottom:4px">
+                  // data/sync-engine
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <span data-es style="font-weight:600;color:var(--text-1)">Sincronización DB</span>
+                  <span data-en style="font-weight:600;color:var(--text-1)">DB Synchronization</span>
+                  <span style="color:#3B82F6;font-size:0.68rem">
+                    <span data-es>En tiempo real</span>
+                    <span data-en>Real-time</span>
+                  </span>
+                </div>
+              </div>
+        
+              <div class="mockup-card-sm">
+                <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-3);margin-bottom:4px">
+                  // security/ssl-vault
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <span data-es style="font-weight:600;color:var(--text-1)">Cifrado de Extremo a Extremo</span>
+                  <span data-en style="font-weight:600;color:var(--text-1)">End-to-End Encryption</span>
+                  <span style="color:#A78BFA;font-size:0.68rem">
+                    <span data-es>Activo</span>
+                    <span data-en>Active</span>
+                  </span>
+                </div>
+              </div>
+        
+              <div class="mockup-card-sm">
+                <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-3);margin-bottom:4px">
+                  // performance/asset-optimizer
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <span data-es style="font-weight:600;color:var(--text-1)">Compresión de Activos</span>
+                  <span data-en style="font-weight:600;color:var(--text-1)">Asset Compression</span>
+                  <span style="color:#22C55E;font-size:0.68rem">
+                    <span data-es>Optimizado 100%</span>
+                    <span data-en>100% Optimized</span>
+                  </span>
+                </div>
+              </div>
+        
+              <div class="mockup-bar" style="margin-top:12px">
+                <div class="mockup-bar-fill" style="width:100%; background: linear-gradient(90deg, var(--blue), #22C55E)"></div>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:0.65rem;color:var(--text-3);margin-top:4px">
+                <span>Uptime: 99.9%</span>
+                <span>SLA: Optimized</span>
+              </div>
+        
+              <div class="mockup-line" style="margin-top:10px"></div>
+              <div class="mockup-line" style="width:60%"></div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROCESS ═══ -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:center">
+        <div class="section-label" style="justify-content:center" data-es>- Nuestro Proceso</div>
+        <div class="section-label" style="justify-content:center" data-en>Our process</div>
+        <h2 class="section-title" data-es>Cómo trabajamos <em>contigo</em></h2>
+        <h2 class="section-title" data-en>How we work <em>with you</em></h2>
+        <p class="section-sub" style="margin:0 auto" data-es>Un proceso probado que elimina la incertidumbre y maximiza
+          el valor entregado en cada sprint.</p>
+        <p class="section-sub" style="margin:0 auto" data-en>A proven process that eliminates uncertainty and maximizes
+          value delivered in every sprint.</p>
+
+      </div>
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="process-num">01</div>
+          <div class="process-step-title" data-es>Cotización & Diagnóstico</div>
+          <div class="process-step-title" data-en>Quote & Diagnosis</div>
+          <p class="process-step-desc" data-es>Completas el formulario detallado. Analizamos tu proyecto y te enviamos
+            una propuesta en 24h.</p>
+          <p class="process-step-desc" data-en>You complete the detailed form. We analyze your project and send a
+            proposal within 24h.</p>
+        </div>
+        <div class="process-step reveal" style="transition-delay:0.1s">
+          <div class="process-num">02</div>
+          <div class="process-step-title" data-es>Diseño & Arquitectura</div>
+          <div class="process-step-title" data-en>Design & Architecture</div>
+          <p class="process-step-desc" data-es>Wireframes, arquitectura técnica y validación contigo antes de escribir
+            una línea de código.</p>
+          <p class="process-step-desc" data-en>Wireframes, technical architecture and validation with you before writing
+            a single line of code.</p>
+        </div>
+        <div class="process-step reveal" style="transition-delay:0.2s">
+          <div class="process-num">03</div>
+          <div class="process-step-title" data-es>Desarrollo por Sprints</div>
+          <div class="process-step-title" data-en>Sprint Development</div>
+          <p class="process-step-desc" data-es>Entregas parciales cada semana. Ves el progreso real en tiempo real.
+            Feedback integrado.</p>
+          <p class="process-step-desc" data-en>Partial deliveries every week. See real progress in real time. Integrated
+            feedback.</p>
+        </div>
+        <div class="process-step reveal" style="transition-delay:0.3s">
+          <div class="process-num">04</div>
+          <div class="process-step-title" data-es>Deploy & Soporte</div>
+          <div class="process-step-title" data-en>Deploy & Support</div>
+          <p class="process-step-desc" data-es>Despliegue a producción, capacitación, documentación y 30 días de soporte
+            incluidos.</p>
+          <p class="process-step-desc" data-en>Production deployment, training, documentation and 30 days of support
+            included.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SAAS ═══ -->
+  <section class="saas-section" id="saas">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:center">
+        <div class="section-label" data-es>Productos SaaS</div>
+        <div class="section-label" data-en>SaaS Products</div>
+        <h2 class="section-title" data-es>Soluciones listas<br>para <em>usar hoy</em></h2>
+        <h2 class="section-title" data-en>Solutions ready<br><em>to use today</em></h2>
+        <p class="section-sub" style="margin:0 auto" data-es>Nuestros productos SaaS propios, listos para adaptarse a tu
+          negocio o servir de base para tu próxima plataforma.</p>
+        <p class="section-sub" style="margin:0 auto" data-en>Our own SaaS products, ready to adapt to your business or
+          serve as the foundation for your next platform.</p>
+
+      </div>
+      <div class="saas-grid">
+        <div class="saas-card reveal">
+          <div class="saas-card-header">
+            <div class="saas-icon"><svg viewBox="0 0 24 24" stroke-width="1.5">
+                <rect x="3" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="3" width="7" height="7" rx="1" />
+                <rect x="3" y="14" width="7" height="7" rx="1" />
+                <rect x="14" y="14" width="7" height="7" rx="1" />
+              </svg></div>
+            <span class="saas-badge saas-badge-live" data-es>Activo</span>
+            <span class="saas-badge saas-badge-live" data-en>Active</span>
+          </div>
+          <div class="saas-card-body">
+            <div class="saas-card-title">KodeCRM</div>
+            <p class="saas-card-desc" data-es>CRM completo para PYMES. Gestiona clientes, pipeline de ventas y
+              comunicaciones en una sola plataforma.</p>
+            <p class="saas-card-desc" data-en>Complete CRM for SMBs. Manage clients, sales pipeline and communications
+              in one platform.</p>
+            <ul class="saas-features">
+              <li data-es>Gestión de clientes ilimitados</li>
+              <li data-en>Unlimited client management</li>
+              <li data-es>Pipeline visual de ventas</li>
+              <li data-en>Visual sales pipeline</li>
+              <li data-es>Reportes automáticos</li>
+              <li data-en>Automatic reports</li>
+            </ul>
+            <a href="#" class="saas-cta">Ver demo →</a>
+          </div>
+        </div>
+        <div class="saas-card reveal" style="transition-delay:0.1s">
+          <div class="saas-card-header">
+            <div class="saas-icon"><svg viewBox="0 0 24 24" stroke-width="1.5">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+              </svg></div>
+            <span class="saas-badge saas-badge-live" data-es>Activo</span>
+            <span class="saas-badge saas-badge-live" data-en>Active</span>
+          </div>
+          <div class="saas-card-body">
+            <div class="saas-card-title">KodeQuote</div>
+            <p class="saas-card-desc" data-es>Sistema de cotizaciones automáticas con generación de contratos PDF,
+              firmas y seguimiento de estados.</p>
+            <p class="saas-card-desc" data-en>Automatic quoting system with PDF contract generation, signatures and
+              status tracking.</p>
+            <ul class="saas-features">
+              <li data-es>Cotizaciones automáticas</li>
+              <li data-en>Automatic quotes</li>
+              <li data-es>Contratos PDF dinámicos</li>
+              <li data-en>Dynamic PDF contracts</li>
+              <li data-es>Panel de seguimiento</li>
+              <li data-en>Tracking dashboard</li>
+            </ul>
+            <a href="#" class="saas-cta">Ver demo →</a>
+          </div>
+        </div>
+        <div class="saas-card reveal" style="transition-delay:0.2s">
+          <div class="saas-card-header">
+            <div class="saas-icon"><svg viewBox="0 0 24 24" stroke-width="1.5">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+              </svg></div>
+            <span class="saas-badge saas-badge-live" data-es>Activo</span>
+            <span class="saas-badge saas-badge-live" data-en>Active</span>
+          </div>
+          <div class="saas-card-body">
+            <div class="saas-card-title">KodeStore</div>
+            <p class="saas-card-desc" data-es>Dashboard de analíticas de negocio con IA integrada para detectar patrones
+              y oportunidades de crecimiento.</p>
+            <p class="saas-card-desc" data-en>Business analytics dashboard with integrated AI to detect patterns and
+              growth opportunities.</p>
+            <ul class="saas-features">
+              <li data-es>Onboarding en menos de 24 horas</li>
+              <li data-en>Onboarding in less than 24 hours</li>
+              <li data-es>SEO y velocidad optimizados por defecto</li>
+              <li data-en>SEO and speed optimized by default</li>
+              <li data-es>Amplia variedad de sistemas saas y a la medida</li>
+              <li data-en>Wide variety of SaaS and custom systems</li>
+            </ul>
+            <a href="#" class="saas-cta" data-es>Ver Catalogo →</a>
+            <a href="#" class="saas-cta" data-en>See Catalog →</a>
+          </div>
+        </div>
+        <div class="saas-card reveal" style="transition-delay:0.2s">
+          <div class="saas-card-header">
+            <div class="saas-icon"><svg viewBox="0 0 24 24" stroke-width="1.5">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+              </svg></div>
+            <span class="saas-badge saas-badge-soon" data-es>Pronto</span>
+            <span class="saas-badge saas-badge-soon" data-en>Coming soon</span>
+          </div>
+          <div class="saas-card-body">
+            <div class="saas-card-title">KodeAnalytics</div>
+            <p class="saas-card-desc" data-es>Dashboard de analíticas de negocio con IA integrada para detectar patrones
+              y oportunidades de crecimiento.</p>
+            <p class="saas-card-desc" data-en>Business analytics dashboard with integrated AI to detect patterns and
+              growth opportunities.</p>
+            <ul class="saas-features">
+              <li data-es>IA para detección de patrones</li>
+              <li data-en>AI for pattern detection</li>
+              <li data-es>Reportes personalizables</li>
+              <li data-en>Customizable reports</li>
+              <li data-es>Integraciones múltiples</li>
+              <li data-en>Multiple integrations</li>
+            </ul>
+            <a href="#" class="saas-cta" data-es>Notificarme →</a>
+            <a href="#" class="saas-cta" data-en>Notify me →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TESTIMONIALS ═══ -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:center">
+        <div class="section-label" data-es>Testimonios</div>
+        <div class="section-label" data-en>Testimonials</div>
+        <h2 class="section-title" data-es>Lo que dicen <em>nuestros clientes</em></h2>
+        <h2 class="section-title" data-en>What our <em>clients say</em></h2>
+      </div>
+
+      <div class="testimonials-container">
+        <div class="testimonials-track">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote" data-es>"KodevaSoft redujo nuestros tiempos de gestión en un 60%."</p>
+            <p class="testimonial-quote" data-en>"KodevaSoft reduced our management time by 60%."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">MR</div>
+              <div>
+                <div class="author-name">María Rodríguez</div>
+                <div class="author-role">CEO · TechLogística</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote" data-es>"Código limpio y comunicación impecable en todo momento."</p>
+            <p class="testimonial-quote" data-en>"Clean code and impeccable communication at all times."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">CG</div>
+              <div>
+                <div class="author-name">Carlos García</div>
+                <div class="author-role">Fundador · InnovaStore</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote" data-es>"Nuestra plataforma SaaS superó todas las expectativas."</p>
+            <p class="testimonial-quote" data-en>"Our SaaS platform exceeded all expectations."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AS</div>
+              <div>
+                <div class="author-name">Ana Suárez</div>
+                <div class="author-role">CTO · DataFlow Labs</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote" data-es>"La mejor decisión técnica que hemos tomado este año."</p>
+            <p class="testimonial-quote" data-en>"The best technical decision we've made this year."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">JP</div>
+              <div>
+                <div class="author-name">Juan Pérez</div>
+                <div class="author-role">Director · SoftNet</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote" data-es>"Escalabilidad real y un equipo que entiende el negocio."</p>
+            <p class="testimonial-quote" data-en>"Real scalability and a team that understands the business."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">LM</div>
+              <div>
+                <div class="author-name">Laura Méndez</div>
+                <div class="author-role">Product Manager</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote" data-es>"Soporte técnico excepcional post-lanzamiento."</p>
+            <p class="testimonial-quote" data-en>"Exceptional post-launch technical support."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">RH</div>
+              <div>
+                <div class="author-name">Ricardo Herrera</div>
+                <div class="author-role">E-commerce Lead</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote" data-es>"Dominio total de las tecnologías modernas."</p>
+            <p class="testimonial-quote" data-en>"Total mastery of modern technologies."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">EV</div>
+              <div>
+                <div class="author-name">Elena Vargas</div>
+                <div class="author-role">Startup Founder</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote" data-es>"Un aliado estratégico más que un proveedor."</p>
+            <p class="testimonial-quote" data-en>"A strategic ally more than a provider."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">DM</div>
+              <div>
+                <div class="author-name">Daniel Martínez</div>
+                <div class="author-role">Operations Manager</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote" data-es>"Diseños UI/UX que realmente convierten usuarios."</p>
+            <p class="testimonial-quote" data-en>"UI/UX designs that actually convert users."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">SK</div>
+              <div>
+                <div class="author-name">Sofia Klein</div>
+                <div class="author-role">Marketing Director</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote" data-es>"Velocidad de carga y rendimiento de primer nivel."</p>
+            <p class="testimonial-quote" data-en>"Top-tier loading speed and performance."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">OC</div>
+              <div>
+                <div class="author-name">Oscar Calle</div>
+                <div class="author-role">DevOps Engineer</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" aria-hidden="true">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote" data-es>"KodevaSoft redujo nuestros tiempos de gestión en un 60%."</p>
+            <p class="testimonial-quote" data-en>"KodevaSoft reduced our management time by 60%."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">MR</div>
+              <div>
+                <div class="author-name">María Rodríguez</div>
+                <div class="author-role">CEO</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card" aria-hidden="true">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote" data-es>"Código limpio y comunicación impecable."</p>
+            <p class="testimonial-quote" data-en>"Clean code and impeccable communication."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">CG</div>
+              <div>
+                <div class="author-name">Carlos García</div>
+                <div class="author-role">Founder</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card" aria-hidden="true">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote" data-es>"Nuestra plataforma SaaS superó expectativas."</p>
+            <p class="testimonial-quote" data-en>"Our SaaS platform exceeded expectations."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AS</div>
+              <div>
+                <div class="author-name">Ana Suárez</div>
+                <div class="author-role">CTO</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA FINAL ═══ -->
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <div class="cta-inner reveal">
+        <div class="section-label" style="text-align:center" data-es>¿Listo para empezar?</div>
+        <div class="section-label" style="text-align:center" data-en>Ready to start?</div>
+        <h2 class="section-title" style="text-align:center;font-size:clamp(2rem,5vw,3.5rem)" data-es>Tu próximo
+          producto<br><em>empieza aquí</em></h2>
+        <h2 class="section-title" style="text-align:center;font-size:clamp(2rem,5vw,3.5rem)" data-en>Your next
+          product<br><em>starts here</em></h2>
+        <p style="text-align:center;color:var(--text-2);margin-top:1rem;font-size:1rem;line-height:1.8" data-es>
+          Cuéntanos tu idea. Analizamos, diseñamos y construimos el software que transforma tu negocio.</p>
+        <p style="text-align:center;color:var(--text-2);margin-top:1rem;font-size:1rem;line-height:1.8" data-en>Tell us
+          your idea. We analyze, design and build the software that transforms your business.</p>
+        <div class="cta-actions">
+          <button class="btn-cta-orange" onclick="openQuote()" style="font-size:1rem;padding:15px 36px">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            <span data-es>Cotizar mi proyecto ahora</span>
+            <span data-en>Quote my project now</span>
+          </button>
+          <a href="https://wa.me/573174485239" class="btn-outline">
+            <span data-es>Hablar con un experto →</span>
+            <span data-en>Talk to an expert →</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="#" class="nav-logo" style="display:inline-flex">
+            <div class="nav-logo-img-placeholder">K</div>
+            <span class="nav-logo-name">Kodeva<span>Soft</span></span>
+          </a>
+          <p class="footer-brand-desc" data-es>Ingeniería de software premium para empresas que quieren crecer sin
+            límites tecnológicos.</p>
+          <p class="footer-brand-desc" data-en>Premium software engineering for companies that want to grow without
+            technological limits.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="https://wa.me/tu-numero" class="social-btn" aria-label="WhatsApp" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.631 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+              </svg>
+            </a>
+            <a href="mailto:tu-correo@gmail.com" class="social-btn" aria-label="Gmail">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg>
+            </a>s
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title" data-es>Servicios</div>
+          <div class="footer-col-title" data-en>Services</div>
+          <ul class="footer-links">
+            <li><a href="#services" data-es>Desarrollo Web</a><a href="#services" data-en>Web Development</a></li>
+            <li><a href="#services" data-es>Apps Móviles</a><a href="#services" data-en>Mobile Apps</a></li>
+            <li><a href="#services" data-es>Plataformas SaaS</a><a href="#services" data-en>SaaS Platforms</a></li>
+            <li><a href="#services" data-es>Sistemas Empresariales</a><a href="#services" data-en>Enterprise Systems</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title" data-es>Empresa</div>
+          <div class="footer-col-title" data-en>Company</div>
+          <ul class="footer-links">
+            <li><a href="#why" data-es>Nosotros</a><a href="#why" data-en>About Us</a></li>
+            <li><a href="#saas" data-es>Productos</a><a href="#saas" data-en>Products</a></li>
+            <li><a href="#testimonials" data-es>Clientes</a><a href="#testimonials" data-en>Clients</a></li>
+            <li><a href="mailto:hola@kodevasoft.space">hola@kodevasoft.space</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title" data-es>Contacto</div>
+          <div class="footer-col-title" data-en>Contact</div>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/573001234567">WhatsApp</a></li>
+            <li><a href="mailto:hola@kodevasoft.space">Email</a></li>
+            <li><a href="#" data-es>Agendar llamada</a><a href="#" data-en>Schedule call</a></li>
+            <li><button onclick="openQuote()"
+                style="background:none;border:none;cursor:pointer;color:var(--orange);font-size:0.85rem;font-family:var(--font-body);padding:0;font-weight:600"
+                data-es>Cotizar proyecto →</button><button onclick="openQuote()"
+                style="background:none;border:none;cursor:pointer;color:var(--orange);font-size:0.85rem;font-family:var(--font-body);padding:0;font-weight:600"
+                data-en>Quote project →</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy" data-es>© 2025 <span>KodevaSoft</span>. Todos los derechos reservados. Hecho con ❤️ en
+          Cúcuta.</p>
+        <p class="footer-copy" data-en>© 2025 <span>KodevaSoft</span>. All rights reserved. Made with ❤️ in Cúcuta.</p>
+        <p class="footer-copy" data-es>Construido con React · Firebase · Vite</p>
+        <p class="footer-copy" data-en>Built with React · Firebase · Vite</p>
+      </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════
+     QUOTE OVERLAY — COTIZADOR EXTENDIDO
+═══════════════════════════════════════════════════════════ -->
+  <div class="quote-overlay" id="quoteOverlay" onclick="handleOverlayClick(event)">
+    <div class="quote-panel" id="quotePanel">
+
+      <!-- HEADER -->
+      <div class="qp-header">
+        <div class="qp-header-left">
+          <div class="qp-badge">📋 Cotización Inteligente</div>
+          <h2 class="qp-title" data-es>Cuéntanos tu proyecto</h2>
+          <h2 class="qp-title" data-en>Tell us about your project</h2>
+          <p class="qp-subtitle" data-es>Completa este formulario detallado. Recibirás una propuesta personalizada en
+            menos de 24 horas. Tu información llega directamente a nuestro CRM.</p>
+          <p class="qp-subtitle" data-en>Complete this detailed form. You'll receive a personalized proposal in less
+            than 24 hours. Your information goes directly to our CRM.</p>
+        </div>
+        <button class="qp-close" onclick="closeQuote()" aria-label="Cerrar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- STEPS -->
+      <div class="qp-steps" id="qpSteps">
+        <div class="qp-step active" data-step="1">
+          <div class="qp-step-num">1</div>
+          <div class="qp-step-label" data-es>Datos del Cliente</div>
+          <div class="qp-step-label" data-en>Client Info</div>
+        </div>
+        <div class="qp-step-line"></div>
+        <div class="qp-step" data-step="2">
+          <div class="qp-step-num">2</div>
+          <div class="qp-step-label" data-es>Tipo de Proyecto</div>
+          <div class="qp-step-label" data-en>Project Type</div>
+        </div>
+        <div class="qp-step-line"></div>
+        <div class="qp-step" data-step="3">
+          <div class="qp-step-num">3</div>
+          <div class="qp-step-label" data-es>Requerimientos</div>
+          <div class="qp-step-label" data-en>Requirements</div>
+        </div>
+        <div class="qp-step-line"></div>
+        <div class="qp-step" data-step="4">
+          <div class="qp-step-num">4</div>
+          <div class="qp-step-label" data-es>Diseño & Técnico</div>
+          <div class="qp-step-label" data-en>Design & Tech</div>
+        </div>
+        <div class="qp-step-line"></div>
+        <div class="qp-step" data-step="5">
+          <div class="qp-step-num">5</div>
+          <div class="qp-step-label" data-es>Resumen</div>
+          <div class="qp-step-label" data-en>Summary</div>
+        </div>
+      </div>
+
+      <!-- SUCCESS SCREEN -->
+      <div class="qp-success" id="qpSuccess">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+        </div>
+        <div class="success-title" data-es>¡Cotización enviada!</div>
+        <div class="success-title" data-en>Quote submitted!</div>
+        <p class="success-desc" data-es>Tu solicitud llegó a nuestro CRM. Revisaremos tu proyecto y te enviaremos una
+          propuesta detallada en menos de <strong>24 horas</strong>. Revisa tu email.</p>
+        <p class="success-desc" data-en>Your request arrived in our CRM. We'll review your project and send you a
+          detailed proposal in less than <strong>24 hours</strong>. Check your email.</p>
+        <button class="btn-cta-orange" onclick="closeQuote()" style="margin-top:2rem">
+          <span data-es>Cerrar ✓</span>
+          <span data-en>Close ✓</span>
+        </button>
+      </div>
+
+      <!-- FORM STEPS -->
+      <div id="qpFormContainer">
+        <!-- STEP 1: DATOS DEL CLIENTE -->
+        <div class="qstep active" id="step1">
+          <div class="qp-body">
+            <div class="qp-section-title">
+              <div class="qp-section-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+              </div>
+              <span data-es>Información del Cliente</span>
+              <span data-en>Client Information</span>
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label"><span data-es>Nombre completo</span><span data-en>Full name</span> <span
+                    class="required">*</span></label>
+                <input type="text" class="form-input" id="q_nombre" placeholder="Juan Pérez" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><span data-es>Empresa / Organización</span><span data-en>Company /
+                    Organization</span></label>
+                <input type="text" class="form-input" id="q_empresa" placeholder="Mi Empresa SAS">
+                <span class="form-hint" data-es>Opcional. Déjalo en blanco si eres freelancer o independiente.</span>
+                <span class="form-hint" data-en>Optional. Leave blank if you're a freelancer or independent.</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><span data-es>Correo electrónico</span><span data-en>Email address</span>
+                  <span class="required">*</span></label>
+                <input type="email" class="form-input" id="q_email" placeholder="juan@empresa.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><span data-es>Teléfono / WhatsApp</span><span data-en>Phone / WhatsApp</span>
+                  <span class="required">*</span></label>
+                <input type="tel" class="form-input" id="q_telefono" placeholder="+57 300 123 4567" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><span data-es>País / Ciudad</span><span data-en>Country / City</span></label>
+                <input type="text" class="form-input" id="q_ciudad" placeholder="Colombia, Cúcuta">
+              </div>
+              <div class="form-group">
+                <label class="form-label"><span data-es>¿Cómo nos encontraste?</span><span data-en>How did you find
+                    us?</span></label>
+                <select class="form-select" id="q_fuente">
+                  <option value="" data-es>Selecciona una opción</option>
+                  <option value="" data-en>Select an option</option>
+                  <option value="google" data-es>Google / Búsqueda web</option>
+                  <option value="google" data-en>Google / Web search</option>
+                  <option value="referido" data-es>Recomendación de alguien</option>
+                  <option value="referido" data-en>Someone's recommendation</option>
+                  <option value="redes" data-es>Redes sociales</option>
+                  <option value="redes" data-en>Social media</option>
+                  <option value="linkedin">LinkedIn</option>
+                  <option value="otro" data-es>Otro</option>
+                  <option value="otro" data-en>Other</option>
+                </select>
+              </div>
+              <div class="form-group form-full">
+                <label class="form-label"><span data-es>Sitio web actual (si tienes)</span><span data-en>Current website
+                    (if any)</span></label>
+                <input type="url" class="form-input" id="q_web" placeholder="https://miempresa.com">
+                <span class="form-hint" data-es>Ayuda a entender tu presencia digital actual y el punto de
+                  partida.</span>
+                <span class="form-hint" data-en>Helps understand your current digital presence and starting
+                  point.</span>
+              </div>
+            </div>
+          </div>
+          <div class="qp-footer">
+            <div class="qp-footer-left">
+              <div class="qp-footer-info" data-es>Paso <strong>1</strong> de <strong>5</strong> · Información básica
+              </div>
+              <div class="qp-footer-info" data-en>Step <strong>1</strong> of <strong>5</strong> · Basic information
+              </div>
+            </div>
+            <button class="qp-btn-next" onclick="goToStep(2)">
+              <span data-es>Siguiente</span><span data-en>Next</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 2: TIPO DE PROYECTO -->
+        <div class="qstep" id="step2">
+          <div class="qp-body">
+            <div class="qp-section-title">
+              <div class="qp-section-icon">
+                <svg viewBox="0 0 24 24">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <span data-es>Tipo de Proyecto</span>
+              <span data-en>Project Type</span>
+            </div>
+            <div class="form-group" style="margin-bottom:1.5rem">
+              <label class="form-label" data-es>¿Qué tipo de solución necesitas? <span class="required">*</span></label>
+              <label class="form-label" data-en>What type of solution do you need? <span
+                  class="required">*</span></label>
+              <div style="margin-top:0.75rem">
+                <div class="service-type-grid" id="serviceTypeGrid">
+                  <div class="service-type-card" onclick="selectServiceType(this,'web')">
+                    <div class="st-icon"><svg viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                        <line x1="3" y1="9" x2="21" y2="9" />
+                        <line x1="9" y1="21" x2="9" y2="9" />
+                      </svg></div>
+                    <div class="st-name" data-es>Sitio / App Web</div>
+                    <div class="st-name" data-en>Website / Web App</div>
+                  </div>
+                  <div class="service-type-card" onclick="selectServiceType(this,'mobile')">
+                    <div class="st-icon"><svg viewBox="0 0 24 24">
+                        <rect x="5" y="2" width="14" height="20" rx="2" />
+                        <line x1="12" y1="18" x2="12.01" y2="18" />
+                      </svg></div>
+                    <div class="st-name" data-es>App Móvil</div>
+                    <div class="st-name" data-en>Mobile App</div>
+                  </div>
+                  <div class="service-type-card" onclick="selectServiceType(this,'saas')">
+                    <div class="st-icon"><svg viewBox="0 0 24 24">
+                        <rect x="2" y="3" width="20" height="14" rx="2" />
+                        <line x1="8" y1="21" x2="16" y2="21" />
+                        <line x1="12" y1="17" x2="12" y2="21" />
+                      </svg></div>
+                    <div class="st-name" data-es>Plataforma SaaS</div>
+                    <div class="st-name" data-en>SaaS Platform</div>
+                  </div>
+                  <div class="service-type-card" onclick="selectServiceType(this,'ecommerce')">
+                    <div class="st-icon"><svg viewBox="0 0 24 24">
+                        <circle cx="9" cy="21" r="1" />
+                        <circle cx="20" cy="21" r="1" />
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                      </svg></div>
+                    <div class="st-name" data-es>E-commerce</div>
+                    <div class="st-name" data-en>E-commerce</div>
+                  </div>
+                  <div class="service-type-card" onclick="selectServiceType(this,'crm_erp')">
+                    <div class="st-icon"><svg viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                      </svg></div>
+                    <div class="st-name">CRM / ERP</div>
+                  </div>
+                  <div class="service-type-card" onclick="selectServiceType(this,'api')">
+                    <div class="st-icon"><svg viewBox="0 0 24 24">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                      </svg></div>
+                    <div class="st-name" data-es>API / Backend</div>
+                    <div class="st-name" data-en>API / Backend</div>
+                  </div>
+                  <div class="service-type-card" onclick="selectServiceType(this,'automatizacion')">
+                    <div class="st-icon"><svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="3" />
+                        <path
+                          d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+                      </svg></div>
+                    <div class="st-name" data-es>Automatización</div>
+                    <div class="st-name" data-en>Automation</div>
+                  </div>
+                  <div class="service-type-card" onclick="selectServiceType(this,'otro')">
+                    <div class="st-icon"><svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" y1="8" x2="12" y2="12" />
+                        <line x1="12" y1="16" x2="12.01" y2="16" />
+                      </svg></div>
+                    <div class="st-name" data-es>Otro / No sé</div>
+                    <div class="st-name" data-en>Other / Not sure</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" style="margin-bottom:1.5rem">
+              <label class="form-label" data-es>¿Ya tienes algo construido o es desde cero?</label>
+              <label class="form-label" data-en>Do you already have something built or is it from scratch?</label>
+              <div style="display:flex;gap:0.75rem;margin-top:0.5rem;flex-wrap:wrap">
+                <div class="timeline-opt" onclick="selectDesdeBase(this,'scratch')" style="flex:1;min-width:120px">
+                  <span class="timeline-label" data-es>Desde cero</span><span class="timeline-label" data-en>From
+                    scratch</span>
+                  <span class="timeline-sub" data-es>Proyecto nuevo</span><span class="timeline-sub" data-en>New
+                    project</span>
+                </div>
+                <div class="timeline-opt" onclick="selectDesdeBase(this,'mejora')" style="flex:1;min-width:120px">
+                  <span class="timeline-label" data-es>Mejorar existente</span><span class="timeline-label"
+                    data-en>Improve existing</span>
+                  <span class="timeline-sub" data-es>Tengo algo hecho</span><span class="timeline-sub" data-en>I have
+                    something built</span>
+                </div>
+                <div class="timeline-opt" onclick="selectDesdeBase(this,'migracion')" style="flex:1;min-width:120px">
+                  <span class="timeline-label" data-es>Migración</span><span class="timeline-label"
+                    data-en>Migration</span>
+                  <span class="timeline-sub" data-es>Cambio de tecnología</span><span class="timeline-sub" data-en>Tech
+                    stack change</span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label"><span data-es>Describe brevemente tu proyecto</span><span data-en>Briefly
+                  describe your project</span> <span class="required">*</span></label>
+              <textarea class="form-textarea" id="q_descripcion" style="min-height:90px"
+                placeholder="Ej: Necesito una plataforma donde mis clientes puedan gestionar pedidos, ver reportes en tiempo real y comunicarse con mi equipo..."
+                required></textarea>
+              <span class="form-hint" data-es>Mientras más detalles, mejor será la propuesta. No te preocupes por
+                términos técnicos.</span>
+              <span class="form-hint" data-en>The more details, the better the proposal. Don't worry about technical
+                terms.</span>
+            </div>
+          </div>
+          <div class="qp-footer">
+            <button class="qp-btn-back" onclick="goToStep(1)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+              <span data-es>Atrás</span><span data-en>Back</span>
+            </button>
+            <div class="qp-footer-info" data-es>Paso <strong>2</strong> de <strong>5</strong> · Tipo de proyecto</div>
+            <div class="qp-footer-info" data-en>Step <strong>2</strong> of <strong>5</strong> · Project type</div>
+            <button class="qp-btn-next" onclick="goToStep(3)">
+              <span data-es>Siguiente</span><span data-en>Next</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3: REQUERIMIENTOS -->
+        <div class="qstep" id="step3">
+          <div class="qp-body">
+            <div class="qp-section-title">
+              <div class="qp-section-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M9 11l3 3L22 4" />
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                </svg>
+              </div>
+              <span data-es>Requerimientos Funcionales</span>
+              <span data-en>Functional Requirements</span>
+            </div>
+
+            <div class="form-group" style="margin-bottom:1.5rem">
+              <label class="form-label" data-es>¿Qué funcionalidades son indispensables? <span
+                  class="required">*</span></label>
+              <label class="form-label" data-en>What features are essential? <span class="required">*</span></label>
+              <div style="margin-top:0.75rem">
+                <div class="checkbox-grid" id="featuresGrid">
+                  <div class="check-item" onclick="toggleCheck(this,'autenticacion')">
+                    <div class="check-box"><svg class="check-box-mark" viewBox="0 0 10 10" fill="none" stroke-width="2">
+                        <polyline points="1.5 5.5 4 8 8.5 2" />
+                      </svg></div>
+                    <span data-es>Autenticación / Login</span><span data-en>Authentication / Login</span>
+                  </div>
+                  <div class="check-item" onclick="toggleCheck(this,'panel_admin')">
+                    <div class="check-box"><svg class="check-box-mark" viewBox="0 0 10 10" fill="none" stroke-width="2">
+                        <polyline points="1.5 5.5 4 8 8.5 2" />
+                      </svg></div>
+                    <span data-es>Panel de administración</span><span data-en>Admin panel</span>
+                  </div>
+                  <div class="check-item" onclick="toggleCheck(this,'pagos')">
+                    <div class="check-box"><svg class="check-box-mark" viewBox="0 0 10 10" fill="none" stroke-width="2">
+                        <polyline points="1.5 5.5 4 8 8.5 2" />
+                      </svg></div>
+                    <span data-es>Pagos en línea</span><span data-en>Online payments</span>
+                  </div>
+                  <div class="check-item" onclick="toggleCheck(this,'reportes')">
+                    <div class="check-box"><svg class="check-box-mark" viewBox="0 0 10 10" fill="none" stroke-width="2">
+                        <polyline points="1.5 5.5 4 8 8.5 2" />
+                      </svg></div>
+                    <span data-es>Reportes / Analytics</span><span data-en>Reports / Analytics</span>
+                  </div>
+                  <div class="check-item" onclick="toggleCheck(this,'notificaciones')">
+                    <div class="check-box"><svg class="check-box-mark" viewBox="0 0 10 10" fill="none" stroke-width="2">
+                        <polyline points="1.5 5.5 4 8 8.5 2" />
+                      </svg></div>
+                    <span data-es>Notificaciones push/email</span><span data-en>Push/email notifications</span>
+                  </div>
+                  <div class="check-item" onclick="toggleCheck(this,'chat')">
+                    <div class="check-box"><svg class="check-box-mark" viewBox="0 0 10 10" fill="none" stroke-width="2">
+                        <polyline points="1.5 5.5 4 8 8.5 2" />
+                      </svg></div>
+                    <span data-es>Chat / Mensajería</span><span data-en>Chat / Messaging</span>
+                  </div>
+                  <div class="check-item" onclick="toggleCheck(this,'api_externa')">
+                    <div class="check-box"><svg class="check-box-mark" viewBox="0 0 10 10" fill="none" stroke-width="2">
+                        <polyline points="1.5 5.5 4 8 8.5 2" />
+                      </svg></div>
+                    <span data-es>Integración con APIs externas</span><span data-en>External API integration</span>
+                  </div>
+                  <div class="check-item" onclick="toggleCheck(this,'multiusuario')">
+                    <div class="check-box"><svg class="check-box-mark" viewBox="0 0 10 10" fill="none" stroke-width="2">
+                        <polyline points="1.5 5.5 4 8 8.5 2" />
+                      </svg></div>
+                    <span data-es>Multi-usuario / Roles</span><span data-en>Multi-user / Roles</span>
+                  </div>
+                  <div class="check-item" onclick="toggleCheck(this,'multiidioma')">
+                    <div class="check-box"><svg class="check-box-mark" viewBox="0 0 10 10" fill="none" stroke-width="2">
+                        <polyline points="1.5 5.5 4 8 8.5 2" />
+                      </svg></div>
+                    <span data-es>Multiidioma</span><span data-en>Multi-language</span>
+                  </div>
+                  <div class="check-item" onclick="toggleCheck(this,'pdf_docs')">
+                    <div class="check-box"><svg class="check-box-mark" viewBox="0 0 10 10" fill="none" stroke-width="2">
+                        <polyline points="1.5 5.5 4 8 8.5 2" />
+                      </svg></div>
+                    <span data-es>Generación de PDFs</span><span data-en>PDF generation</span>
+                  </div>
+                  <div class="check-item" onclick="toggleCheck(this,'ia')">
+                    <div class="check-box"><svg class="check-box-mark" viewBox="0 0 10 10" fill="none" stroke-width="2">
+                        <polyline points="1.5 5.5 4 8 8.5 2" />
+                      </svg></div>
+                    <span data-es>Inteligencia Artificial</span><span data-en>Artificial Intelligence</span>
+                  </div>
+                  <div class="check-item" onclick="toggleCheck(this,'offline')">
+                    <div class="check-box"><svg class="check-box-mark" viewBox="0 0 10 10" fill="none" stroke-width="2">
+                        <polyline points="1.5 5.5 4 8 8.5 2" />
+                      </svg></div>
+                    <span data-es>Funcionar sin internet</span><span data-en>Work offline</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-grid" style="margin-bottom:1.25rem">
+              <div class="form-group">
+                <label class="form-label" data-es>¿Cuántos usuarios esperas? <span class="required">*</span></label>
+                <label class="form-label" data-en>How many users do you expect? <span class="required">*</span></label>
+                <select class="form-select" id="q_usuarios">
+                  <option value="" data-es>Selecciona</option>
+                  <option value="" data-en>Select</option>
+                  <option value="1-10" data-es>1–10 usuarios (interno/personal)</option>
+                  <option value="1-10" data-en>1–10 users (internal/personal)</option>
+                  <option value="10-100" data-es>10–100 usuarios (PYME)</option>
+                  <option value="10-100" data-en>10–100 users (SMB)</option>
+                  <option value="100-1000" data-es>100–1,000 usuarios</option>
+                  <option value="100-1000" data-en>100–1,000 users</option>
+                  <option value="1000+" data-es>Más de 1,000 usuarios</option>
+                  <option value="1000+" data-en>More than 1,000 users</option>
+                  <option value="publico" data-es>Público en general (sin límite)</option>
+                  <option value="publico" data-en>General public (unlimited)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" data-es>¿En qué dispositivos debe funcionar?</label>
+                <label class="form-label" data-en>What devices should it work on?</label>
+                <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.5rem">
+                  <div class="priority-badge" onclick="togglePriority(this,'desktop')">🖥 Desktop</div>
+                  <div class="priority-badge" onclick="togglePriority(this,'mobile')">📱 <span data-es>Móvil</span><span
+                      data-en>Mobile</span></div>
+                  <div class="priority-badge" onclick="togglePriority(this,'tablet')">📲 Tablet</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" data-es>¿Tienes referentes visuales o sitios que te gusten?</label>
+              <label class="form-label" data-en>Do you have visual references or sites you like?</label>
+              <textarea class="form-textarea" id="q_referentes" style="min-height:70px"
+                placeholder="Stripe.com, Linear.app, Notion.so... o describe el estilo que buscas"></textarea>
+              <span class="form-hint" data-es>URLs, capturas, descripciones de estilo... todo ayuda a alinear la
+                visión.</span>
+              <span class="form-hint" data-en>URLs, screenshots, style descriptions... everything helps align the
+                vision.</span>
+            </div>
+          </div>
+          <div class="qp-footer">
+            <button class="qp-btn-back" onclick="goToStep(2)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+              <span data-es>Atrás</span><span data-en>Back</span>
+            </button>
+            <div class="qp-footer-info" data-es>Paso <strong>3</strong> de <strong>5</strong> · Funcionalidades</div>
+            <div class="qp-footer-info" data-en>Step <strong>3</strong> of <strong>5</strong> · Features</div>
+            <button class="qp-btn-next" onclick="goToStep(4)">
+              <span data-es>Siguiente</span><span data-en>Next</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 4: DISEÑO Y TÉCNICO -->
+        <div class="qstep" id="step4">
+          <div class="qp-body">
+            <div class="qp-section-title">
+              <div class="qp-section-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              </div>
+              <span data-es>Diseño, Presupuesto & Tiempo</span>
+              <span data-en>Design, Budget & Timeline</span>
+            </div>
+
+            <div class="form-group" style="margin-bottom:1.5rem">
+              <label class="form-label" data-es>¿Qué estilo de diseño prefieres?</label>
+              <label class="form-label" data-en>What design style do you prefer?</label>
+              <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.5rem" id="styleGrid">
+                <div class="priority-badge" onclick="togglePriority(this,'minimalista')" data-es>Minimalista</div>
+                <div class="priority-badge" onclick="togglePriority(this,'minimalista')" data-en>Minimalist</div>
+                <div class="priority-badge" onclick="togglePriority(this,'corporativo')" data-es>Corporativo</div>
+                <div class="priority-badge" onclick="togglePriority(this,'corporativo')" data-en>Corporate</div>
+                <div class="priority-badge" onclick="togglePriority(this,'moderno')" data-es>Moderno / Tech</div>
+                <div class="priority-badge" onclick="togglePriority(this,'moderno')" data-en>Modern / Tech</div>
+                <div class="priority-badge" onclick="togglePriority(this,'oscuro')" data-es>Dark / Oscuro</div>
+                <div class="priority-badge" onclick="togglePriority(this,'oscuro')" data-en>Dark mode</div>
+                <div class="priority-badge" onclick="togglePriority(this,'colorido')" data-es>Colorido / Vibrante</div>
+                <div class="priority-badge" onclick="togglePriority(this,'colorido')" data-en>Colorful / Vibrant</div>
+                <div class="priority-badge" onclick="togglePriority(this,'ninguno')" data-es>No me importa el diseño
+                </div>
+                <div class="priority-badge" onclick="togglePriority(this,'ninguno')" data-en>Design doesn't matter</div>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom:1.5rem">
+              <label class="form-label" data-es>¿Ya tienes diseño / mockups?</label>
+              <label class="form-label" data-en>Do you already have design / mockups?</label>
+              <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:0.5rem">
+                <div class="timeline-opt" onclick="selectDiseñoBase(this,'si')" style="flex:1;min-width:110px">
+                  <span class="timeline-label" data-es>Sí, tengo Figma/XD</span><span class="timeline-label"
+                    data-en>Yes, I have Figma/XD</span>
+                </div>
+                <div class="timeline-opt selected" onclick="selectDiseñoBase(this,'parcial')"
+                  style="flex:1;min-width:110px">
+                  <span class="timeline-label" data-es>Tengo referencias</span><span class="timeline-label" data-en>I
+                    have references</span>
+                </div>
+                <div class="timeline-opt" onclick="selectDiseñoBase(this,'no')" style="flex:1;min-width:110px">
+                  <span class="timeline-label" data-es>No, necesito diseño</span><span class="timeline-label"
+                    data-en>No, I need design</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom:1.5rem">
+              <label class="form-label" data-es>Presupuesto estimado (COP) <span class="required">*</span></label>
+              <label class="form-label" data-en>Estimated budget (COP) <span class="required">*</span></label>
+              <div class="budget-display" style="margin-top:0.75rem">
+                <div class="budget-amount" id="budgetDisplay">$5,000,000</div>
+                <div class="budget-unit" data-es>Pesos colombianos (COP)</div>
+                <div class="budget-unit" data-en>Colombian pesos (COP)</div>
+              </div>
+              <input type="range" class="range-input" id="budgetRange" min="1" max="100" value="20"
+                oninput="updateBudget(this.value)" style="--val:20%">
+              <div class="range-labels">
+                <span data-es>$500K (básico)</span><span data-en>$500K (basic)</span>
+                <span data-es>$25M (empresarial)</span><span data-en>$25M (enterprise)</span>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom:1.5rem">
+              <label class="form-label" data-es>¿Cuándo necesitas tenerlo listo?</label>
+              <label class="form-label" data-en>When do you need it ready?</label>
+              <div class="timeline-grid" style="margin-top:0.5rem" id="timelineGrid">
+                <div class="timeline-opt" onclick="selectTimeline(this,'urgente')">
+                  <span class="timeline-label" data-es>Urgente</span><span class="timeline-label" data-en>Urgent</span>
+                  <span class="timeline-sub" data-es>Menos de 2 sem</span><span class="timeline-sub" data-en>Less than 2
+                    wks</span>
+                </div>
+                <div class="timeline-opt" onclick="selectTimeline(this,'1mes')">
+                  <span class="timeline-label">1 <span data-es>mes</span><span data-en>month</span></span>
+                  <span class="timeline-sub" data-es>2–4 semanas</span><span class="timeline-sub" data-en>2–4
+                    weeks</span>
+                </div>
+                <div class="timeline-opt selected" onclick="selectTimeline(this,'3meses')">
+                  <span class="timeline-label">1–3 <span data-es>meses</span><span data-en>months</span></span>
+                  <span class="timeline-sub" data-es>Lo estándar</span><span class="timeline-sub"
+                    data-en>Standard</span>
+                </div>
+                <div class="timeline-opt" onclick="selectTimeline(this,'6meses')">
+                  <span class="timeline-label">3–6 <span data-es>meses</span><span data-en>months</span></span>
+                  <span class="timeline-sub" data-es>Proyecto grande</span><span class="timeline-sub" data-en>Large
+                    project</span>
+                </div>
+                <div class="timeline-opt" onclick="selectTimeline(this,'flexible')">
+                  <span class="timeline-label" data-es>Flexible</span><span class="timeline-label"
+                    data-en>Flexible</span>
+                  <span class="timeline-sub" data-es>Sin urgencia</span><span class="timeline-sub" data-en>No
+                    rush</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" data-es>¿Algo más que debamos saber?</label>
+              <label class="form-label" data-en>Anything else we should know?</label>
+              <textarea class="form-textarea" id="q_adicional" style="min-height:80px"
+                placeholder="Restricciones técnicas, tecnologías que prefieres o rechazas, contexto especial, integraciones obligatorias, colores de marca..."></textarea>
+            </div>
+          </div>
+          <div class="qp-footer">
+            <button class="qp-btn-back" onclick="goToStep(3)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+              <span data-es>Atrás</span><span data-en>Back</span>
+            </button>
+            <div class="qp-footer-info" data-es>Paso <strong>4</strong> de <strong>5</strong> · Diseño y presupuesto
+            </div>
+            <div class="qp-footer-info" data-en>Step <strong>4</strong> of <strong>5</strong> · Design & budget</div>
+            <button class="qp-btn-next" onclick="goToStep(5)">
+              <span data-es>Ver resumen</span><span data-en>See summary</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 5: RESUMEN Y ENVÍO -->
+        <div class="qstep" id="step5">
+          <div class="qp-body">
+            <div class="qp-section-title">
+              <div class="qp-section-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" y1="13" x2="8" y2="13" />
+                  <line x1="16" y1="17" x2="8" y2="17" />
+                </svg>
+              </div>
+              <span data-es>Resumen de tu Solicitud</span>
+              <span data-en>Your Request Summary</span>
+            </div>
+
+            <!-- Summary cards (populated by JS) -->
+            <div class="summary-grid" id="summaryGrid">
+              <!-- populated by JS -->
+            </div>
+
+            <!-- Estimated price -->
+            <div class="summary-price-box">
+              <div class="spr-label" data-es>💰 Estimación Referencial</div>
+              <div class="spr-label" data-en>💰 Reference Estimate</div>
+              <div class="spr-amount" id="summaryPrice"><span class="spr-currency">$</span><span id="priceVal">—</span>
+              </div>
+              <div class="spr-disclaimer" data-es>⚠️ Este valor es solo estimado y no es definitivo. La propuesta final
+                puede variar según el análisis técnico detallado del proyecto.</div>
+              <div class="spr-disclaimer" data-en>⚠️ This value is only an estimate and is not final. The final proposal
+                may vary according to the detailed technical analysis of the project.</div>
+            </div>
+
+            <!-- Tags of selected features -->
+            <div class="summary-tags" id="summaryTags"></div>
+
+            <!-- Terms -->
+            <div
+              style="background:rgba(255,71,0,0.05);border:1px solid rgba(255,71,0,0.15);border-radius:var(--radius-md);padding:1rem 1.25rem;margin-bottom:1.25rem">
+              <p style="font-size:0.78rem;color:var(--text-2);line-height:1.7" data-es>
+                📋 Al enviar esta solicitud autorizas a KodevaSoft contactarte para discutir tu proyecto. La información
+                proporcionada es confidencial y se usará exclusivamente para elaborar tu propuesta.
+              </p>
+              <p style="font-size:0.78rem;color:var(--text-2);line-height:1.7" data-en>
+                📋 By submitting this request you authorize KodevaSoft to contact you to discuss your project. The
+                information provided is confidential and will be used exclusively to prepare your proposal.
+              </p>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px">
+              <div class="check-item" onclick="toggleCheck(this,'terminos')" id="termsCheck">
+                <div class="check-box"><svg class="check-box-mark" viewBox="0 0 10 10" fill="none" stroke-width="2">
+                    <polyline points="1.5 5.5 4 8 8.5 2" />
+                  </svg></div>
+                <span data-es>Acepto los términos y autorizo ser contactado por KodevaSoft</span>
+                <span data-en>I accept the terms and authorize KodevaSoft to contact me</span>
+              </div>
+            </div>
+          </div>
+          <div class="qp-footer">
+            <button class="qp-btn-back" onclick="goToStep(4)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+              <span data-es>Editar</span><span data-en>Edit</span>
+            </button>
+            <div class="qp-footer-info" data-es>Paso <strong>5</strong> de <strong>5</strong> · Confirmación</div>
+            <div class="qp-footer-info" data-en>Step <strong>5</strong> of <strong>5</strong> · Confirmation</div>
+            <button class="qp-btn-submit" onclick="submitQuote()" id="submitBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 2L11 13" />
+                <path d="M22 2L15 22 11 13 2 9l20-7z" />
+              </svg>
+              <span data-es>Enviar solicitud</span>
+              <span data-en>Submit request</span>
+            </button>
+          </div>
+        </div>
+      </div><!-- /qpFormContainer -->
+
+    </div>
+  </div>
+
+  <!-- ================================================================
+     SCRIPTS
+================================================================ -->
+  <script>
+    /* ───────────── PARTICLES ───────────── */
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    let W, H, particles = [];
+    function resize() { W = canvas.width = innerWidth; H = canvas.height = innerHeight; }
+    function initParticles() {
+      particles = [];
+      const n = Math.min(80, Math.floor(W * H / 16000));
+      for (let i = 0; i < n; i++) particles.push({
+        x: Math.random() * W, y: Math.random() * H,
+        vx: (Math.random() - .5) * 0.3, vy: (Math.random() - .5) * 0.3,
+        r: Math.random() * 1.5 + 0.5, a: Math.random() * 0.5 + 0.1
+      });
+    }
+    function drawParticles() {
+      ctx.clearRect(0, 0, W, H);
+      particles.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+        if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(59,130,246,${p.a})`; ctx.fill();
+      });
+      particles.forEach((a, i) => particles.slice(i + 1).forEach(b => {
+        const d = Math.hypot(a.x - b.x, a.y - b.y);
+        if (d < 120) {
+          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+          ctx.strokeStyle = `rgba(59,130,246,${0.12 * (1 - d / 120)})`; ctx.stroke();
+        }
+      }));
+      requestAnimationFrame(drawParticles);
+    }
+    resize(); initParticles(); drawParticles();
+    window.addEventListener('resize', () => { resize(); initParticles(); });
+
+    /* ───────────── NAV ───────────── */
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').style.boxShadow =
+        scrollY > 20 ? '0 2px 24px rgba(0,0,0,0.4)' : 'none';
+    });
+    function closeDrawer() { document.getElementById('navDrawer').classList.remove('open'); }
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('navDrawer').classList.toggle('open');
+    });
+
+    /* ───────────── THEME ───────────── */
+    function setTheme(t) {
+      document.documentElement.setAttribute('data-theme', t);
+      document.querySelectorAll('[data-t]').forEach(b => b.classList.toggle('active', b.dataset.t === t));
+      // Update favicon color on theme change
+      const favicon = document.getElementById('favicon-link');
+      const color = t === 'dark' ? '%231B4FD8' : '%231341B8';
+      favicon.href = `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='${color}'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='18' font-family='monospace' font-weight='bold'>K</text></svg>`;
+    }
+    document.querySelectorAll('[data-t]').forEach(b => b.addEventListener('click', () => setTheme(b.dataset.t)));
+
+    /* ───────────── LANGUAGE ───────────── */
+    function setLang(l) {
+      document.documentElement.setAttribute('data-lang', l);
+      document.querySelectorAll('[data-l]').forEach(b => b.classList.toggle('active', b.dataset.l === l));
+    }
+    document.querySelectorAll('[data-l]').forEach(b => b.addEventListener('click', () => setLang(b.dataset.l)));
+
+/* ───────────── KODEVASOFT CORE ARCHITECTURE ───────────── */
+const tabs = {
+  tab1: [
+    { t: 'cm', c: '// Simbolismo de Marca: El Gallito de las Rocas (Kiro)' },
+    { t: 'kw', c: 'class ', extra: [{t:'fn',c:'BrandIdentity'}], after: ' {' },
+    { t: 'cm', c: '  /** ' },
+    { t: 'cm', c: '   * Representa el Rupicola peruvianus, ave nacional que habita ' },
+    { t: 'cm', c: '   * los farallones de la Cordillera Oriental en Norte de Santander.' },
+    { t: 'cm', c: '   */' },
+    { t: 'op', c: '  readonly ', extra: [{t:'wh',c:'mascota'}], after: ' = ', extra: [{t:'str',c:"'Kiro'"}] },
+    { t: 'op', c: '  valores', after: ': ', extra: [{t:'wh',c:"['Libertad Creativa', 'Vigilancia', 'Adaptabilidad']"}] },
+    { t: '', c: '' },
+    { t: 'fn', c: '  getSymbolism', extra: [{t:'wh',c:'() {'}], hl: true },
+    { t: 'kw', c: '    return ', extra: [{t:'str',c:"'El despliegue de sus alas simboliza el escalado de software regional al global'"}] },
+    { t: 'wh', c: '  }' },
+    { t: 'wh', c: '}' }
+  ],
+  tab2: [
+    { t: 'cm', c: '// Nodo Tecnológico: San José de Cúcuta & Departamento' },
+    { t: 'kw', c: 'export const ', extra: [{t:'fn',c:'REGIONAL_HUB'}], after: ' = {' },
+    { t: 'op', c: '  ciudad', after: ': ', extra: [{t:'str',c:"'Cúcuta (Puerto Terrestre de Colombia)'"}] },
+    { t: 'op', c: '  ventaja_competitiva', after: ': ', extra: [{t:'str',c:"'Economía Binacional y Talento Multidisciplinario'"}] },
+    { t: 'op', c: '  infraestructura', after: ': ', extra: [{t:'str',c:"'Conectividad de Fibra Óptica Transfronteriza'"}] },
+    { t: 'wh', c: '};', hl: true },
+    { t: '', c: '' },
+    { t: 'cm', c: '// Norte de Santander: 40 municipios impulsando la era digital' },
+    { t: 'fn', c: 'analizarImpacto', extra: [{t:'wh',c:'() {'}] },
+    { t: 'kw', c: '  if ', extra: [{t:'wh',c:'(ubicacion === '},{t:'str',c:"'Frontera'"},{t:'wh',c:') '}], after: 'return ' + "'Potencial de Exportación de Software';" },
+    { t: 'wh', c: '}' }
+  ],
+  tab3: [
+    { t: 'cm', c: '// Trayectoria Profesional: KodevaSoft S.A.S' },
+    { t: 'kw', c: 'namespace ', extra: [{t:'fn',c:'CorporateHistory'}], after: ' {' },
+    { t: 'op', c: '  export const ', extra: [{t:'wh',c:'fundacion'}], after: ' = ', extra: [{t:'num',c:'2024'}] },
+    { t: 'op', c: '  export const ', extra: [{t:'wh',c:'filosofia'}], after: ' = ', extra: [{t:'str',c:"'Ingeniería de precisión con impacto social'"}] },
+    { t: '', c: '' },
+    { t: 'cm', c: '  // Hitos alcanzados' },
+    { t: 'fn', c: '  export async function ', extra: [{t:'fn',c:'evolucion'}], hl: true, after: '() {' },
+    { t: 'kw', c: '    await ', extra: [{t:'wh',c:'desarrollar('},{t:'str',c:"'Soluciones Enterprise'"},{t:'wh',c:')'}] },
+    { t: 'kw', c: '    await ', extra: [{t:'wh',c:'liderar('},{t:'str',c:"'Transformación Digital en el Nororiente'"},{t:'wh',c:')'}] },
+    { t: 'kw', c: '    return ', extra: [{t:'str',c:"'Consolidación como líderes en consultoría IT'"}] },
+    { t: 'wh', c: '  }' },
+    { t: 'wh', c: '}' }
+  ]
+};
+
+    let currentTab = 'tab1';
+    function renderCode(tabKey) {
+      const lines = tabs[tabKey] || tabs.tab1;
+      const numsEl = document.getElementById('line-nums');
+      const contentEl = document.getElementById('code-content');
+      if (!numsEl || !contentEl) return;
+      numsEl.innerHTML = '';
+      contentEl.innerHTML = '';
+      lines.forEach((l, i) => {
+        const num = document.createElement('div');
+        num.className = 'code-lnum' + (l.hl ? ' active-line' : '');
+        num.textContent = i + 1;
+        numsEl.appendChild(num);
+        const line = document.createElement('div');
+        line.className = 'code-line' + (l.hl ? ' highlight-line' : '');
+        let html = '';
+        if (!l.c && !l.extra) { line.innerHTML = '&nbsp;'; contentEl.appendChild(line); return; }
+        if (l.t && l.c) html += `<span class="t-${l.t}">${esc(l.c)}</span>`;
+        if (l.extra) l.extra.forEach(e => { html += `<span class="t-${e.t}">${esc(e.c)}</span>`; });
+        if (l.after) html += `<span class="t-wh">${esc(l.after)}</span>`;
+        if (l.end_kw) html += `<span class="t-kw">${esc(l.end_kw)}</span>`;
+        if (l.indent) line.style.paddingLeft = (l.indent * 20) + 'px'; // <--- AÑADE ESTO
+        line.innerHTML = html || '&nbsp;';
+        contentEl.appendChild(line);
+      });
+      // add cursor to last line
+      const lastLine = contentEl.lastElementChild;
+      if (lastLine) lastLine.innerHTML += '<span class="code-cursor"></span>';
+    }
+    function esc(s) {
+      return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+    function switchTab(el, key) {
+      document.querySelectorAll('.code-tab').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+      currentTab = key;
+      renderCode(key);
+    }
+    renderCode('tab1');
+
+    /* ───────────── COUNTER ANIMATION ───────────── */
+    function animateCounters() {
+      document.querySelectorAll('.count[data-target]').forEach(el => {
+        const target = +el.dataset.target;
+        let cur = 0;
+        const step = target / 40;
+        const t = setInterval(() => {
+          cur = Math.min(cur + step, target);
+          el.textContent = Math.round(cur);
+          if (cur >= target) clearInterval(t);
+        }, 30);
+      });
+    }
+
+    /* ───────────── SCROLL REVEAL ───────────── */
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          if (e.target.querySelector('.count')) animateCounters();
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+    /* ───────────── QUOTE OVERLAY ───────────── */
+    let currentStep = 1;
+    const totalSteps = 5;
+    let selectedServiceType = '';
+    let selectedTimeline = '3meses';
+    let selectedDesde = '';
+    let selectedDiseño = 'parcial';
+    let checkedFeatures = new Set();
+    let selectedDevices = new Set();
+    let selectedStyle = new Set();
+    let budgetValue = 5000000;
+
+    function openQuote() {
+      document.getElementById('quoteOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+      currentStep = 1;
+      showStep(1);
+    }
+    function closeQuote() {
+      document.getElementById('quoteOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function handleOverlayClick(e) {
+      if (e.target === document.getElementById('quoteOverlay')) closeQuote();
+    }
+
+    function showStep(n) {
+      for (let i = 1; i <= totalSteps; i++) {
+        const s = document.getElementById('step' + i);
+        if (s) { s.classList.toggle('active', i === n); }
+        const stepEl = document.querySelector(`.qp-step[data-step="${i}"]`);
+        if (stepEl) {
+          stepEl.classList.toggle('active', i === n);
+          stepEl.classList.toggle('done', i < n);
+        }
+      }
+      currentStep = n;
+      if (n === 5) buildSummary();
+    }
+
+    function goToStep(n) {
+      if (n < 1 || n > totalSteps) return;
+      showStep(n);
+      document.getElementById('quotePanel').scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function selectServiceType(el, val) {
+      document.querySelectorAll('#serviceTypeGrid .service-type-card').forEach(c => c.classList.remove('selected'));
+      el.classList.add('selected');
+      selectedServiceType = val;
+    }
+    function selectDesdeBase(el, val) {
+      el.closest('.qstep').querySelectorAll('.timeline-opt').forEach(c => c.classList.remove('selected'));
+      el.classList.add('selected');
+      selectedDesde = val;
+    }
+    function selectDiseñoBase(el, val) {
+      el.closest('.form-group').querySelectorAll('.timeline-opt').forEach(c => c.classList.remove('selected'));
+      el.classList.add('selected');
+      selectedDiseño = val;
+    }
+    function selectTimeline(el, val) {
+      document.querySelectorAll('#timelineGrid .timeline-opt').forEach(c => c.classList.remove('selected'));
+      el.classList.add('selected');
+      selectedTimeline = val;
+    }
+    function toggleCheck(el, key) {
+      el.classList.toggle('checked');
+      if (el.classList.contains('checked')) checkedFeatures.add(key);
+      else checkedFeatures.delete(key);
+    }
+    function togglePriority(el, key) {
+      el.classList.toggle('selected');
+      if (el.classList.contains('selected')) selectedDevices.add(key);
+      else selectedDevices.delete(key);
+    }
+
+    function updateBudget(val) {
+      const pct = (val - 1) / 99;
+      const budgetRanges = [500000, 1000000, 2000000, 3000000, 5000000, 8000000, 12000000, 18000000, 25000000];
+      const idx = Math.floor(pct * (budgetRanges.length - 1));
+      budgetValue = budgetRanges[idx];
+      document.getElementById('budgetDisplay').textContent = '$' + budgetValue.toLocaleString('es-CO');
+      const slider = document.getElementById('budgetRange');
+      slider.style.setProperty('--val', Math.round(pct * 100) + '%');
+    }
+
+    function buildSummary() {
+      const nombre = document.getElementById('q_nombre')?.value || '—';
+      const email = document.getElementById('q_email')?.value || '—';
+      const empresa = document.getElementById('q_empresa')?.value || 'N/A';
+      const desc = document.getElementById('q_descripcion')?.value || '—';
+      const usuarios = document.getElementById('q_usuarios')?.value || '—';
+      const serviceLabels = {
+        web: 'Sitio/App Web', mobile: 'App Móvil', saas: 'Plataforma SaaS',
+        ecommerce: 'E-commerce', crm_erp: 'CRM/ERP', api: 'API/Backend',
+        automatizacion: 'Automatización', otro: 'Otro'
+      };
+      const timelineLabels = {
+        urgente: 'Urgente (<2 sem)', '1mes': '~1 mes', '3meses': '1–3 meses',
+        '6meses': '3–6 meses', flexible: 'Flexible'
+      };
+      const grid = document.getElementById('summaryGrid');
+      grid.innerHTML = `
+    <div class="summary-card"><div class="summary-card-label">👤 Cliente</div><div class="summary-card-val">${nombre}</div></div>
+    <div class="summary-card"><div class="summary-card-label">🏢 Empresa</div><div class="summary-card-val">${empresa}</div></div>
+    <div class="summary-card"><div class="summary-card-label">📧 Email</div><div class="summary-card-val" style="font-size:0.85rem">${email}</div></div>
+    <div class="summary-card"><div class="summary-card-label">🚀 Tipo</div><div class="summary-card-val">${serviceLabels[selectedServiceType] || '—'}</div></div>
+    <div class="summary-card"><div class="summary-card-label">👥 Usuarios</div><div class="summary-card-val" style="font-size:0.85rem">${usuarios}</div></div>
+    <div class="summary-card"><div class="summary-card-label">⏱ Tiempo</div><div class="summary-card-val">${timelineLabels[selectedTimeline] || '—'}</div></div>
+  `;
+      // Tags
+      const tagsEl = document.getElementById('summaryTags');
+      tagsEl.innerHTML = '';
+      checkedFeatures.forEach(f => {
+        const s = document.createElement('span');
+        s.className = 'sum-tag'; s.textContent = f.replace(/_/g, ' ');
+        tagsEl.appendChild(s);
+      });
+      // Price estimate
+      let estimate = budgetValue * 1.2;
+      const multipliers = {
+        saas: 1.8, crm_erp: 2.0, mobile: 1.5, api: 1.3, ecommerce: 1.4
+      };
+      if (multipliers[selectedServiceType]) estimate *= multipliers[selectedServiceType];
+      if (checkedFeatures.has('ia')) estimate *= 1.5;
+      if (checkedFeatures.has('pagos')) estimate *= 1.2;
+      if (checkedFeatures.size > 6) estimate *= 1.3;
+      if (selectedTimeline === 'urgente') estimate *= 1.4;
+      estimate = Math.round(estimate / 100000) * 100000;
+      document.getElementById('priceVal').textContent = '$' + estimate.toLocaleString('es-CO');
+    }
+
+    function submitQuote() {
+      const termsCheck = document.getElementById('termsCheck');
+      if (!termsCheck || !termsCheck.classList.contains('checked')) {
+        termsCheck.style.border = '2px solid var(--orange)';
+        setTimeout(() => termsCheck.style.border = '', 2000);
+        return;
+      }
+      const btn = document.getElementById('submitBtn');
+      btn.textContent = '⏳ Enviando...';
+      btn.disabled = true;
+      // Simulate submission (replace with Firestore integration)
+      setTimeout(() => {
+        document.getElementById('qpFormContainer').style.display = 'none';
+        document.getElementById('qpSteps').style.display = 'none';
+        document.getElementById('qpSuccess').classList.add('show');
+      }, 1800);
+    }
+
+    /* ───────────── ESC CLOSE ───────────── */
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeQuote();
+    });
+  </script>
+</body>
+
+</html>
